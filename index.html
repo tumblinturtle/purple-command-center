@@ -312,14 +312,38 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
 .plac-panel{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--sh);}
 .plac-head{padding:13px 17px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--tealPale),#fff);}
 .plac-ico{width:26px;height:26px;background:linear-gradient(135deg,#0891b2,#22d3ee);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:14px;}
-.plac-body{padding:10px 14px;display:flex;flex-direction:column;gap:7px;}
-.plac-row{background:var(--surface2);border:1.5px solid var(--border);border-radius:9px;padding:11px 13px;}
+.plac-body{padding:10px 14px;display:flex;flex-direction:column;gap:0;}
+/* Placement Table */
+.plac-tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:13px;}
+.plac-tbl thead th{padding:8px 10px;text-align:right;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);border-bottom:2px solid var(--border);background:var(--surface2);}
+.plac-tbl thead th:first-child{text-align:left;border-radius:8px 0 0 0;}
+.plac-tbl thead th:last-child{border-radius:0 8px 0 0;}
+.plac-tbl tbody td{padding:10px 10px;text-align:right;font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:600;font-size:13px;border-bottom:1px solid var(--border);}
+.plac-tbl tbody td:first-child{text-align:left;font-weight:700;}
+.plac-tbl tbody tr:last-child td{border-bottom:none;}
+.plac-tbl tbody tr:hover{background:var(--surface2);}
+.plac-tbl .plac-total td{font-weight:800;background:var(--surface2);border-top:2px solid var(--border2);font-size:13px;}
+.plac-tbl .plac-total td:first-child{border-radius:0 0 0 8px;}
+.plac-tbl .plac-total td:last-child{border-radius:0 0 8px 0;}
+.plac-acos-bar{display:inline-flex;align-items:center;gap:5px;}
+.plac-acos-bar .pab-fill{height:6px;border-radius:3px;min-width:4px;transition:width .3s;}
+.plac-acos-good{color:var(--green);}
+.plac-acos-warn{color:var(--gold);}
+.plac-acos-bad{color:var(--red);}
+.plac-best{background:rgba(5,150,105,.06);}
+.plac-worst{background:rgba(220,38,38,.04);}
+.plac-mod-pill{display:inline-block;font-size:10px;padding:2px 7px;border-radius:4px;font-weight:700;margin-left:4px;}
+.plac-mod-up{background:var(--greenPale);color:var(--green);}
+.plac-mod-down{background:var(--redPale);color:var(--red);}
+.plac-mod-same{background:var(--surface3);color:var(--muted);}
+/* Placement Rows */
+.plac-row{background:var(--surface2);border:1.5px solid var(--border);border-radius:9px;padding:11px 13px;margin-top:7px;}
 .plac-name{font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:14px;color:var(--text);margin-bottom:6px;}
 .plac-mets{display:flex;gap:12px;margin-bottom:8px;}
 .pm-item{text-align:center;}
 .pm-val{font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:14px;color:var(--text);}
 .pm-lbl{font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;font-weight:600;margin-top:1px;}
-.plac-rec{font-size:14px;color:var(--teal);line-height:1.4;padding:6px 8px;background:var(--tealPale);border-radius:5px;margin-bottom:7px;}
+.plac-rec{font-size:13px;color:var(--teal);line-height:1.4;padding:6px 8px;background:var(--tealPale);border-radius:5px;margin-bottom:7px;}
 .plac-btns{display:flex;gap:5px;}
 .bplac{flex:1;padding:5px;border-radius:5px;font-size:14px;font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;cursor:pointer;border:none;background:linear-gradient(135deg,#0891b2,#22d3ee);color:#fff;}
 .bplac-skip{padding:5px 10px;border-radius:5px;font-size:14px;cursor:pointer;border:1.5px solid var(--border2);background:transparent;color:var(--muted);font-weight:600;}
@@ -1022,9 +1046,16 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
       <div class="plac-panel">
         <div class="plac-head">
           <div class="plac-ico">📍</div>
-          <div style="margin-left:8px"><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:11px">Placement Optimization</div><div style="font-size:9px;color:var(--muted);margin-top:1px" id="placSub">Top of search vs product pages</div></div>
+          <div style="margin-left:8px;flex:1">
+            <div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:12px">Placement Performance & Optimization</div>
+            <div style="font-size:10px;color:var(--muted);margin-top:1px" id="placSub">Top of Search · Product Pages · Rest of Search</div>
+          </div>
+          <div id="placSummaryBadge" style="display:flex;gap:6px;align-items:center"></div>
         </div>
-        <div class="plac-body" id="placBody"></div>
+        <div class="plac-body">
+          <div id="placTable"></div>
+          <div id="placActions" style="display:flex;flex-direction:column;gap:7px;margin-top:4px"></div>
+        </div>
       </div>
       <!-- H10 KEYWORDS -->
       <div class="h10p">
@@ -2067,6 +2098,7 @@ const MKTS={
     placements:[
       {name:'Top of Search (TOS)',acos:'26.4%',ctr:'1.52%',cvr:'9.8%',impressions:'68K',clicks:'1034',orders:'122',sales:'$3248',spend:'$856',rec:'Increase TOS modifier to +25%. Converting well above average.',from:'+10%',to:'+25%',app:false},
       {name:'Product Pages',acos:'38.1%',ctr:'0.71%',cvr:'5.1%',impressions:'44K',clicks:'312',orders:'48',sales:'$1280',spend:'$488',rec:'Reduce Product Page modifier to 0%. High ACOS, low CVR.',from:'+15%',to:'0%',app:false},
+      {name:'Rest of Search',acos:'44.8%',ctr:'0.48%',cvr:'3.4%',impressions:'32K',clicks:'154',orders:'18',sales:'$480',spend:'$215',rec:'Remove Rest of Search modifier — high ACOS 44.8%, very low CVR 3.4%. Wasted spend.',from:'+5%',to:'0%',app:false},
     ],
     keywords:[{kw:'huile de lavande biologique',vol:'12K/mo',score:'high',campaign:'PE-CA | Lavender Oil | Auto',adgroup:'Lavender - Organic',match:'Exact',added:'2026-01-25'},{kw:'essential oils canada pure',vol:'28K/mo',score:'high',campaign:'PE-CA | Lavender Oil | Auto',adgroup:'Essential Oils - Pure',match:'Phrase',added:'2026-02-05'},{kw:'lavender oil canada',vol:'9K/mo',score:'med',campaign:'PE-CA | Brand Campaign',adgroup:'Brand - Lavender',match:'Broad',added:'2026-01-30'}]
   },
@@ -2084,6 +2116,7 @@ const MKTS={
     placements:[
       {name:'Top of Search (TOS)',acos:'29.8%',ctr:'1.21%',cvr:'8.2%',impressions:'52K',clicks:'630',orders:'72',sales:'$1920',spend:'$568',rec:'TOS performing close to target. Maintain current +15% modifier.',from:'+15%',to:'+15%',app:false},
       {name:'Product Pages',acos:'42.1%',ctr:'0.54%',cvr:'3.8%',impressions:'38K',clicks:'205',orders:'28',sales:'$744',spend:'$314',rec:'Remove Product Page modifier — too high ACOS for MX market.',from:'+10%',to:'0%',app:false},
+      {name:'Rest of Search',acos:'48.6%',ctr:'0.38%',cvr:'2.9%',impressions:'28K',clicks:'106',orders:'11',sales:'$292',spend:'$142',rec:'Disable Rest of Search — 48.6% ACOS, 2.9% CVR. Nearly all spend wasted here.',from:'+5%',to:'0%',app:false},
     ],
     keywords:[{kw:'aceite esencial lavanda',vol:'31K/mo',score:'high',campaign:'PE-MX | Aceite Lavanda | Auto',adgroup:'Aceite - Esencial',match:'Exact',added:'2026-02-10'},{kw:'aceite de lavanda organico',vol:'15K/mo',score:'high',campaign:'PE-MX | Aceite Lavanda | Auto',adgroup:'Aceite - Orgánico',match:'Phrase',added:'2026-02-08'},{kw:'agua de rosas pura',vol:'22K/mo',score:'med',campaign:'PE-MX | Agua de Rosas | Manual',adgroup:'Agua - Rosas',match:'Exact',added:'2026-02-15'}]
   },
@@ -2102,6 +2135,7 @@ const MKTS={
     placements:[
       {name:'In-Grid (Search)',acos:'21.1%',ctr:'1.68%',cvr:'11.2%',impressions:'76K',clicks:'1277',orders:'186',sales:'$4960',spend:'$1048',rec:'Excellent performance. Increase In-Grid bid modifier to +30%.',from:'+10%',to:'+30%',app:false},
       {name:'Buy Box',acos:'24.8%',ctr:'1.24%',cvr:'10.1%',impressions:'54K',clicks:'670',orders:'108',sales:'$2880',spend:'$712',rec:'Good CVR. Maintain Buy Box modifier at +15%.',from:'+15%',to:'+15%',app:false},
+      {name:'Browse / Other',acos:'32.4%',ctr:'0.72%',cvr:'6.4%',impressions:'42K',clicks:'302',orders:'54',sales:'$1440',spend:'$468',rec:'Moderate performance. Reduce Browse modifier to +5% — ACOS above target but still converting.',from:'+10%',to:'+5%',app:false},
     ],
     keywords:[{kw:'lavender oil walmart',vol:'18K/mo',score:'high',campaign:'PE-WM | Lavender Oil | Auto',adgroup:'Lavender - Walmart',match:'Exact',added:'2026-01-18'},{kw:'essential oils walmart',vol:'24K/mo',score:'high',campaign:'PE-WM | Essential Bundle | Auto',adgroup:'Bundle - Essential',match:'Phrase',added:'2026-02-03'},{kw:'rose water spray walmart',vol:'14K/mo',score:'med',campaign:'PE-WM | Rose Water | Manual',adgroup:'Rose Water - Spray',match:'Broad',added:'2026-02-12'}]
   }
@@ -2898,22 +2932,101 @@ function rejRec(id){rejected.add(id);renderAI(MKTS[market].recs);toast('Dismisse
 function approveAll(){MKTS[market].recs.forEach(r=>approved.add(r.id));renderAI(MKTS[market].recs);toast(`All ${market} actions approved!`,'ok');}
 
 function renderPlacement(placements){
-  document.getElementById('placSub').textContent=`${market} · ${placements.length} placements`;
-  document.getElementById('placBody').innerHTML=placements.map((p,i)=>{
+  const mktLabel={US:'🇺🇸 US',CA:'🇨🇦 CA',MX:'🇲🇽 MX',WM:'🛒 Walmart'}[market]||market;
+  document.getElementById('placSub').textContent=`${mktLabel} · ${placements.length} placements · Performance by position`;
+
+  // Parse numeric helpers
+  const parseNum=s=>{if(typeof s==='number')return s;const n=String(s).replace(/[^0-9.]/g,'');const m=String(s).toUpperCase();if(m.includes('K'))return parseFloat(n)*1000;return parseFloat(n)||0;};
+  const fmtMoney=n=>n>=1000?'$'+Math.round(n/1000)+'K':'$'+Math.round(n);
+
+  // Compute totals
+  let totImp=0,totClk=0,totOrd=0,totSales=0,totSpend=0;
+  placements.forEach(p=>{totImp+=parseNum(p.impressions);totClk+=parseNum(p.clicks);totOrd+=parseNum(p.orders);totSales+=parseNum(p.sales);totSpend+=parseNum(p.spend);});
+  const totAcos=totSales>0?((totSpend/totSales)*100).toFixed(1):'—';
+  const totCtr=totImp>0?((totClk/totImp)*100).toFixed(2):'—';
+  const totCvr=totClk>0?((totOrd/totClk)*100).toFixed(1):'—';
+
+  // Find best/worst ACOS
+  const acosVals=placements.map(p=>parseFloat(String(p.acos)));
+  const bestIdx=acosVals.indexOf(Math.min(...acosVals));
+  const worstIdx=acosVals.indexOf(Math.max(...acosVals));
+
+  // Summary badges
+  const bestP=placements[bestIdx];
+  const worstP=placements[worstIdx];
+  document.getElementById('placSummaryBadge').innerHTML=
+    `<span style="font-size:9px;padding:3px 8px;border-radius:5px;background:var(--greenPale);color:var(--green);font-weight:700">🏆 Best: ${bestP?.name?.replace(/ \(.*\)/,'')||'—'} ${bestP?.acos||''}</span>`+
+    `<span style="font-size:9px;padding:3px 8px;border-radius:5px;background:var(--redPale);color:var(--red);font-weight:700">⚠ Worst: ${worstP?.name?.replace(/ \(.*\)/,'')||'—'} ${worstP?.acos||''}</span>`;
+
+  // Build table
+  const acosColor=v=>{const n=parseFloat(v);return n<=25?'plac-acos-good':n<=35?'plac-acos-warn':'plac-acos-bad';};
+  const acosBar=(v,max)=>{const n=parseFloat(v);const w=Math.min(100,Math.round((n/(max||60))*100));const c=n<=25?'var(--green)':n<=35?'var(--gold)':'var(--red)';return`<span class="plac-acos-bar"><span class="pab-fill" style="width:${w}px;background:${c}"></span><span class="${acosColor(v)}" style="font-weight:800">${v}</span></span>`;};
+  const modPill=(from,to)=>{const f=parseFloat(String(from).replace(/[^0-9.-]/g,''));const t=parseFloat(String(to).replace(/[^0-9.-]/g,''));if(t>f)return`<span class="plac-mod-pill plac-mod-up">↑ ${to}</span>`;if(t<f)return`<span class="plac-mod-pill plac-mod-down">↓ ${to}</span>`;return`<span class="plac-mod-pill plac-mod-same">→ ${to}</span>`;};
+  const maxAcos=Math.max(...acosVals,60);
+  // Spend share
+  const spendShare=v=>totSpend>0?((parseNum(v)/totSpend)*100).toFixed(0)+'%':'—';
+
+  let tblHtml=`<table class="plac-tbl">
+    <thead><tr>
+      <th style="width:180px">Placement</th>
+      <th>Impressions</th>
+      <th>Clicks</th>
+      <th>CTR</th>
+      <th>Orders</th>
+      <th>Sales</th>
+      <th>Spend</th>
+      <th>Spend %</th>
+      <th>ACOS</th>
+      <th>CVR</th>
+      <th style="width:80px">Modifier</th>
+    </tr></thead><tbody>`;
+
+  placements.forEach((p,i)=>{
+    const rowClass=i===bestIdx?'plac-best':i===worstIdx?'plac-worst':'';
+    const spendStr=typeof p.spend==='string'?p.spend.replace('$',''):p.spend;
+    tblHtml+=`<tr class="${rowClass}">
+      <td>📍 ${p.name}</td>
+      <td>${p.impressions}</td>
+      <td>${p.clicks}</td>
+      <td>${p.ctr}</td>
+      <td>${p.orders}</td>
+      <td>${p.sales}</td>
+      <td>$${spendStr}</td>
+      <td style="color:var(--muted)">${spendShare(p.spend)}</td>
+      <td>${acosBar(p.acos,maxAcos)}</td>
+      <td>${p.cvr}</td>
+      <td>${modPill(p.from,p.to)}</td>
+    </tr>`;
+  });
+
+  // Totals row
+  tblHtml+=`<tr class="plac-total">
+    <td>TOTAL</td>
+    <td>${totImp>=1000?(Math.round(totImp/1000)+'K'):totImp}</td>
+    <td>${totClk>=1000?(Math.round(totClk/1000)+'K'):totClk}</td>
+    <td>${totCtr}%</td>
+    <td>${totOrd}</td>
+    <td>${fmtMoney(totSales)}</td>
+    <td>${fmtMoney(totSpend)}</td>
+    <td>100%</td>
+    <td>${acosBar(totAcos+'%',maxAcos)}</td>
+    <td>${totCvr}%</td>
+    <td></td>
+  </tr>`;
+  tblHtml+=`</tbody></table>`;
+  document.getElementById('placTable').innerHTML=tblHtml;
+
+  // Render action cards below the table
+  document.getElementById('placActions').innerHTML=placements.map((p,i)=>{
     const done=placApproved.has(`${market}-${i}`);
     return`<div class="plac-row">
-      <div class="plac-name">📍 ${p.name}</div>
-      <div class="plac-mets">
-        <div class="pm-item"><div class="pm-val">${p.impressions}</div><div class="pm-lbl">Impr.</div></div>
-        <div class="pm-item"><div class="pm-val">${p.clicks}</div><div class="pm-lbl">Clicks</div></div>
-        <div class="pm-item"><div class="pm-val">${p.orders}</div><div class="pm-lbl">Orders</div></div>
-        <div class="pm-item"><div class="pm-val">${p.sales}</div><div class="pm-lbl">Sales</div></div>
-        <div class="pm-item"><div class="pm-val">$${typeof p.spend==='string'?p.spend.replace('$',''):p.spend}</div><div class="pm-lbl">Spend</div></div>
-        <div class="pm-item"><div class="pm-val ${p.acos.replace('%','')>35?'cmv ab':p.acos.replace('%','')>25?'cmv ao':'cmv ag'}">${p.acos}</div><div class="pm-lbl">ACOS</div></div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px">
+        <span style="font-weight:700;font-size:12px">📍 ${p.name}</span>
+        ${modPill(p.from,p.to)}
       </div>
       <div class="plac-rec">💡 ${p.rec}</div>
       ${done?`<div class="ac-appr">✓ Approved: ${p.from} → ${p.to}</div>`:`<div class="plac-btns">
-        <button class="bplac" onclick="appPlac(${i},'${p.from}','${p.to}')">✓ Apply ${p.from}→${p.to}</button>
+        <button class="bplac" onclick="appPlac(${i},'${p.from}','${p.to}')">✓ Apply ${p.from} → ${p.to}</button>
         <button class="bplac-skip" onclick="toast('Skipped placement change','in')">Skip</button>
       </div>`}
     </div>`;
