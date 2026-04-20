@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Purple Essences â Command Center</title>
+<title>Purple Essences — Command Center</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -398,7 +398,7 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
 .task-item.due{border-left:3px solid var(--purple);background:var(--purplePale);}
 .chk{width:13px;height:13px;border-radius:3px;border:1.5px solid var(--border2);flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;transition:all .15s;}
 .chk.done{background:var(--green);border-color:var(--green);}
-.chk.done::after{content:'â';font-size:14px;color:#fff;font-weight:700;}
+.chk.done::after{content:'✓';font-size:14px;color:#fff;font-weight:700;}
 .task-text{font-size:14px;color:var(--muted);line-height:1.4;font-weight:500;flex:1;}
 .task-mkt{font-size:14px;padding:2px 6px;border-radius:3px;background:var(--surface3);color:var(--dim);flex-shrink:0;font-weight:500;border:1px solid var(--border);}
 
@@ -536,7 +536,7 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
 .lm-pt-card{background:var(--surface);border:1.5px solid var(--border);border-radius:8px;padding:10px;cursor:pointer;transition:all .15s;position:relative;}
 .lm-pt-card:hover{border-color:#f9a8d4;}
 .lm-pt-card.selected{border-color:#be185d;background:#fdf2f8;}
-.lm-pt-card.selected::after{content:'â';position:absolute;top:6px;right:6px;width:16px;height:16px;background:#be185d;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;font-weight:700;display:grid;place-items:center;}
+.lm-pt-card.selected::after{content:'✓';position:absolute;top:6px;right:6px;width:16px;height:16px;background:#be185d;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;font-weight:700;display:grid;place-items:center;}
 .lm-pt-img{font-size:22px;margin-bottom:6px;text-align:center;}
 .lm-pt-name{font-size:14px;color:var(--text);font-weight:600;margin-bottom:2px;line-height:1.3;}
 .lm-pt-asin{font-size:14px;color:var(--muted);font-weight:500;}
@@ -829,15 +829,15 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
     <div style="font-size:12px;color:var(--muted);margin-bottom:22px;line-height:1.6">Select your role to access your dashboard.</div>
     <div class="fl">Select Role</div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:16px">
-      <div class="rc act" onclick="selRole('ceo',this)"><div style="font-size:18px;margin-bottom:4px">ð</div><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:11px">CEO</div><div style="font-size:9px;color:var(--muted)">Full access</div></div>
-      <div class="rc" onclick="selRole('manager',this)"><div style="font-size:18px;margin-bottom:4px">ð</div><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:11px">Manager</div><div style="font-size:9px;color:var(--muted)">Reports + campaigns</div></div>
-      <div class="rc" onclick="selRole('staff',this)"><div style="font-size:18px;margin-bottom:4px">âï¸</div><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:11px">Ad Staff</div><div style="font-size:9px;color:var(--muted)">Campaigns + tasks</div></div>
-      <div class="rc" onclick="selRole('analyst',this)"><div style="font-size:18px;margin-bottom:4px">ð</div><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:11px">Analyst</div><div style="font-size:9px;color:var(--muted)">Reports + keywords</div></div>
+      <div class="rc act" onclick="selRole('ceo',this)"><div style="font-size:18px;margin-bottom:4px">👑</div><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:11px">CEO</div><div style="font-size:9px;color:var(--muted)">Full access</div></div>
+      <div class="rc" onclick="selRole('manager',this)"><div style="font-size:18px;margin-bottom:4px">📊</div><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:11px">Manager</div><div style="font-size:9px;color:var(--muted)">Reports + campaigns</div></div>
+      <div class="rc" onclick="selRole('staff',this)"><div style="font-size:18px;margin-bottom:4px">⚙️</div><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:11px">Ad Staff</div><div style="font-size:9px;color:var(--muted)">Campaigns + tasks</div></div>
+      <div class="rc" onclick="selRole('analyst',this)"><div style="font-size:18px;margin-bottom:4px">🔍</div><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:11px">Analyst</div><div style="font-size:9px;color:var(--muted)">Reports + keywords</div></div>
     </div>
     <div class="fl">Password</div>
     <input class="fi" type="password" id="lpwd" placeholder="Enter your password" onkeydown="if(event.key==='Enter')doLogin()">
-    <button class="blbtn" onclick="doLogin()">Sign In â</button>
-    <div style="font-size:10px;color:var(--dim);text-align:center;margin-top:12px">Authorized access only Â· Purple Essences</div>
+    <button class="blbtn" onclick="doLogin()">Sign In →</button>
+    <div style="font-size:10px;color:var(--dim);text-align:center;margin-top:12px">Authorized access only · Purple Essences</div>
   </div>
 </div>
 
@@ -848,26 +848,26 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
     <div><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:13px">Purple Essences</div><div style="font-size:8px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:1px">Command Center</div></div>
   </div>
   <nav class="hn">
-    <button class="nb act" onclick="showPg('ads',this)">ð Ad Manager</button>
-    <button class="nb" onclick="showPg('daypart',this)">â° Day Parting</button>
-    <button class="nb" onclick="showPg('schedule',this)">ð Staff Schedule</button>
-    <button class="nb" onclick="showPg('reports',this)">ð Reports & Actions</button>
-    <button class="nb" id="nb-admin" onclick="showPg('admin',this)" style="color:#be185d">âï¸ App Settings</button>
+    <button class="nb act" onclick="showPg('ads',this)">📈 Ad Manager</button>
+    <button class="nb" onclick="showPg('daypart',this)">⏰ Day Parting</button>
+    <button class="nb" onclick="showPg('schedule',this)">📋 Staff Schedule</button>
+    <button class="nb" onclick="showPg('reports',this)">📊 Reports & Actions</button>
+    <button class="nb" id="nb-admin" onclick="showPg('admin',this)" style="color:#be185d">⚙️ App Settings</button>
   </nav>
   <div style="display:flex;align-items:center;gap:9px">
     <div class="apibadge" onclick="fbForceSync()" title="Click to force sync">
       <div class="dot lv" id="fbStatusDot" style="background:var(--muted)"></div>
       <span id="fbStatusLbl">Connecting...</span>
     </div>
-    <div class="apibadge" onclick="openSettings()"><div class="dot dm" id="apiDot"></div><span id="apiLbl">NOT CONNECTED</span><span style="color:var(--dim)">â</span></div>
-    <div class="upill" onclick="logout()"><div class="av av-c" id="uav">K</div><span id="ulbl">CEO</span><span style="color:var(--dim);font-size:10px">â©</span></div>
+    <div class="apibadge" onclick="openSettings()"><div class="dot dm" id="apiDot"></div><span id="apiLbl">NOT CONNECTED</span><span style="color:var(--dim)">⚙</span></div>
+    <div class="upill" onclick="logout()"><div class="av av-c" id="uav">K</div><span id="ulbl">CEO</span><span style="color:var(--dim);font-size:10px">↩</span></div>
   </div>
 </header>
 
 <!-- ALERTS -->
 <div class="abar" id="alertBar">
-  <div class="ac inf">ð Connect Amazon API to start receiving live alerts</div>
-  <div class="ac ok">â Dashboard configured for CA & MX markets</div>
+  <div class="ac inf">📋 Connect Amazon API to start receiving live alerts</div>
+  <div class="ac ok">✓ Dashboard configured for CA & MX markets</div>
 </div>
 
 <main>
@@ -887,7 +887,7 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
         <label style="display:flex;align-items:center;gap:5px;font-size:10px;color:var(--muted);cursor:pointer;white-space:nowrap"><input type="checkbox" id="newLaunchMode" style="accent-color:#be185d;width:13px;height:13px"> <span style="font-weight:600;color:#be185d">New Product Launch</span></label>
       </div>
       <button class="bghost" onclick="document.getElementById('asinField').value=''">Clear</button>
-      <button class="bprim" onclick="runAudit()">â¡ Run Audit</button>
+      <button class="bprim" onclick="runAudit()">⚡ Run Audit</button>
     </div>
     <div class="rec-row" id="recentAsins">
       <span class="rec-lbl">Recent:</span>
@@ -896,7 +896,7 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
 
   <!-- ASIN INFO + INVENTORY -->
   <div class="asin-info" id="asinInfo" style="display:none">
-    <div class="asin-img">ð¿</div>
+    <div class="asin-img">🌿</div>
     <div class="asin-meta">
       <div class="asin-title" id="asinTitle"></div>
       <div class="asin-id" id="asinIdLbl"></div>
@@ -906,7 +906,7 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
       <div class="inv-card"><div class="inv-val" id="invTotal">284</div><div class="inv-lbl">In Stock</div></div>
       <div class="inv-card"><div class="inv-val warn" id="invDays">12d</div><div class="inv-lbl">Days Left</div></div>
       <div class="inv-card"><div class="inv-val" id="invSales">23/d</div><div class="inv-lbl">Daily Sales</div></div>
-      <div class="inv-card"><div class="inv-val" id="invStatus">â ï¸</div><div class="inv-lbl">Restock</div></div>
+      <div class="inv-card"><div class="inv-val" id="invStatus">⚠️</div><div class="inv-lbl">Restock</div></div>
     </div>
   </div>
 
@@ -914,13 +914,13 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
   <div id="launchBanner" style="display:none">
     <div class="launch-banner">
       <div class="launch-banner-left">
-        <div class="launch-banner-ico">ð</div>
+        <div class="launch-banner-ico">🚀</div>
         <div>
           <div class="launch-banner-title">New Product Launch Mode Active</div>
-          <div class="launch-banner-sub">Build your full launch campaign structure â keyword harvest, product targets, auto campaigns â in one flow.</div>
+          <div class="launch-banner-sub">Build your full launch campaign structure — keyword harvest, product targets, auto campaigns — in one flow.</div>
         </div>
       </div>
-      <button class="launch-build-btn" onclick="openLaunchBuilder()">ðï¸ Build Launch Campaigns â</button>
+      <button class="launch-build-btn" onclick="openLaunchBuilder()">🏗️ Build Launch Campaigns →</button>
     </div>
   </div>
 
@@ -935,30 +935,30 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
       <button class="dp" onclick="setPreset('mtd',this)">Month to Date</button>
       <button class="dp" onclick="setPreset('lm',this)">Last Month</button>
       <button class="dp" onclick="setPreset('qtd',this)">Quarter to Date</button>
-      <button class="dp" onclick="setPreset('custom',this)">Custom â¾</button>
+      <button class="dp" onclick="setPreset('custom',this)">Custom ▾</button>
     </div>
     <div class="dsep"></div>
     <div class="dcust" id="custInputs" style="display:none">
       <span class="dcustlbl">From</span>
       <input class="dinput" type="date" id="dFrom" value="2026-03-01">
-      <span style="font-size:10px;color:var(--muted)">â</span>
+      <span style="font-size:10px;color:var(--muted)">→</span>
       <input class="dinput" type="date" id="dTo" value="2026-03-12">
       <button class="dapply" onclick="applyCustom()">Apply</button>
     </div>
     <label class="cmp-toggle"><input type="checkbox" id="cmpToggle" onchange="toggleCmp(this)"> Compare period</label>
-    <div class="ddisplay"><span>Showing:</span><span class="ddval" id="dDispVal">Mar 5â12, 2026</span><span id="cmpLbl" style="display:none;color:var(--muted)"></span></div>
+    <div class="ddisplay"><span>Showing:</span><span class="ddval" id="dDispVal">Mar 5–12, 2026</span><span id="cmpLbl" style="display:none;color:var(--muted)"></span></div>
   </div>
 
   <!-- MARKET TABS -->
   <div class="mkt-row">
     <div class="tabs">
-      <button class="tab act" onclick="switchTab('CA',this)">ð¨ð¦ CA <span class="tab-cnt" id="cnt-CA">0</span></button>
-      <button class="tab" onclick="switchTab('MX',this)">ð²ð½ MX <span class="tab-cnt" id="cnt-MX">0</span></button>
+      <button class="tab act" onclick="switchTab('CA',this)">🇨🇦 CA <span class="tab-cnt" id="cnt-CA">0</span></button>
+      <button class="tab" onclick="switchTab('MX',this)">🇲🇽 MX <span class="tab-cnt" id="cnt-MX">0</span></button>
     </div>
     <div class="mkt-actions">
       <label class="paused-toggle"><input type="checkbox" id="showPaused" onchange="renderCamps(MKTS[market].campaigns)"> Show paused campaigns</label>
-      <button class="bsm" onclick="toast('Exporting CSV...','in')">â Export</button>
-      <button class="bsm p" onclick="approveAll()">â Approve All</button>
+      <button class="bsm" onclick="toast('Exporting CSV...','in')">↓ Export</button>
+      <button class="bsm p" onclick="approveAll()">✓ Approve All</button>
     </div>
   </div>
 
@@ -1023,7 +1023,7 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
       <div class="aip">
         <div class="aih" style="display:flex;align-items:center;justify-content:space-between">
           <div style="display:flex;align-items:center;gap:8px">
-            <div class="aiico">ð¤</div>
+            <div class="aiico">🤖</div>
             <div><div class="ait">AI Actions</div><div class="ais" id="aiSub">Approve, modify or reject</div></div>
           </div>
           <div style="display:flex;align-items:center;gap:5px;font-size:11px">
@@ -1036,10 +1036,10 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
       <!-- PLACEMENT OPTIMIZATION -->
       <div class="plac-panel">
         <div class="plac-head">
-          <div class="plac-ico">ð</div>
+          <div class="plac-ico">📍</div>
           <div style="margin-left:8px;flex:1">
             <div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:12px">Placement Performance & Optimization</div>
-            <div style="font-size:10px;color:var(--muted);margin-top:1px" id="placSub">Top of Search Â· Product Pages Â· Rest of Search</div>
+            <div style="font-size:10px;color:var(--muted);margin-top:1px" id="placSub">Top of Search · Product Pages · Rest of Search</div>
           </div>
           <div id="placSummaryBadge" style="display:flex;gap:6px;align-items:center"></div>
         </div>
@@ -1051,8 +1051,8 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
       <!-- H10 KEYWORDS -->
       <div class="h10p">
         <div class="h10h">
-          <div style="display:flex;align-items:center;gap:7px"><div class="h10ico">ð</div><div><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:10px">Helium 10 Keywords</div><div style="font-size:8px;color:var(--muted);margin-top:1px">Suggested for this ASIN</div></div></div>
-          <button class="bsm" onclick="refreshKW()">â» Refresh</button>
+          <div style="display:flex;align-items:center;gap:7px"><div class="h10ico">🚀</div><div><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:10px">Helium 10 Keywords</div><div style="font-size:8px;color:var(--muted);margin-top:1px">Suggested for this ASIN</div></div></div>
+          <button class="bsm" onclick="refreshKW()">↻ Refresh</button>
         </div>
         <div class="kwl" id="kwList"></div>
       </div>
@@ -1064,25 +1064,25 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
 <div class="pg" id="pg-daypart">
   <div class="pg-head">
     <div>
-      <div class="pg-title">â° Day Parting Scheduler</div>
-      <div class="pg-sub">Schedule ads to run during specific hours â maximize conversions during peak traffic times</div>
+      <div class="pg-title">⏰ Day Parting Scheduler</div>
+      <div class="pg-sub">Schedule ads to run during specific hours — maximize conversions during peak traffic times</div>
     </div>
     <div class="dp-top-bar">
       <div class="dp-tz">
-        ð Time Zone:
+        🌐 Time Zone:
         <select id="dpTz" onchange="renderDpGrid()">
-          <option value="PST">Pacific (PST) â Amazon US default</option>
+          <option value="PST">Pacific (PST) — Amazon US default</option>
           <option value="EST">Eastern (EST)</option>
           <option value="CST">Central (CST)</option>
           <option value="MST">Mountain (MST)</option>
-          <option value="CST-MX">Mexico City (CST) â Amazon MX</option>
-          <option value="EST-CA">Eastern (EST) â Amazon CA</option>
+          <option value="CST-MX">Mexico City (CST) — Amazon MX</option>
+          <option value="EST-CA">Eastern (EST) — Amazon CA</option>
           <option value="GMT">GMT / UTC</option>
         </select>
       </div>
       <div style="display:flex;gap:7px">
-        <button class="bghost" onclick="saveDayParting()">ð¾ Save Schedule</button>
-        <button class="bprim" onclick="applyDayParting()">â Apply to Campaigns</button>
+        <button class="bghost" onclick="saveDayParting()">💾 Save Schedule</button>
+        <button class="bprim" onclick="applyDayParting()">✓ Apply to Campaigns</button>
       </div>
     </div>
   </div>
@@ -1091,15 +1091,15 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
     <!-- Market tabs for day parting -->
     <div class="mkt-row">
       <div class="tabs" id="dpMktTabs">
-        <button class="tab act" onclick="switchDpMkt('CA',this)">ð¨ð¦ CA <span class="tab-cnt" id="dpCntCA">0</span></button>
-        <button class="tab" onclick="switchDpMkt('MX',this)">ð²ð½ MX <span class="tab-cnt" id="dpCntMX">0</span></button>
+        <button class="tab act" onclick="switchDpMkt('CA',this)">🇨🇦 CA <span class="tab-cnt" id="dpCntCA">0</span></button>
+        <button class="tab" onclick="switchDpMkt('MX',this)">🇲🇽 MX <span class="tab-cnt" id="dpCntMX">0</span></button>
       </div>
     </div>
 
     <!-- Filter Panel -->
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:14px;box-shadow:var(--sh)">
       <div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:12px;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between">
-        <span>ð Filter Campaigns</span>
+        <span>🔍 Filter Campaigns</span>
         <button class="bsm" onclick="toggleDpFilters()" style="font-size:10px">Show/Hide</button>
       </div>
       <div id="dpFiltersPanel" style="display:none;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:10px">
@@ -1148,15 +1148,15 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
           <span style="font-size:10px;color:var(--muted)" id="dpSelCount">0 selected</span>
         </div>
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-          <input class="dp-camp-search" placeholder="ð Search campaigns..." id="dpSearch" oninput="renderDpCamps()">
+          <input class="dp-camp-search" placeholder="🔍 Search campaigns..." id="dpSearch" oninput="renderDpCamps()">
           <div class="dp-sort-bar">
             <span style="font-size:9px;color:var(--muted);font-weight:600">Sort:</span>
-            <button class="dp-sort-btn act" onclick="setDpSort('name',this)">AâZ</button>
-            <button class="dp-sort-btn" onclick="setDpSort('name-desc',this)">ZâA</button>
-            <button class="dp-sort-btn" onclick="setDpSort('acos-asc',this)">ACOS â</button>
-            <button class="dp-sort-btn" onclick="setDpSort('acos-desc',this)">ACOS â</button>
-            <button class="dp-sort-btn" onclick="setDpSort('spend-desc',this)">Spend â</button>
-            <button class="dp-sort-btn" onclick="setDpSort('conv-desc',this)">Conv â</button>
+            <button class="dp-sort-btn act" onclick="setDpSort('name',this)">A→Z</button>
+            <button class="dp-sort-btn" onclick="setDpSort('name-desc',this)">Z→A</button>
+            <button class="dp-sort-btn" onclick="setDpSort('acos-asc',this)">ACOS ↑</button>
+            <button class="dp-sort-btn" onclick="setDpSort('acos-desc',this)">ACOS ↓</button>
+            <button class="dp-sort-btn" onclick="setDpSort('spend-desc',this)">Spend ↓</button>
+            <button class="dp-sort-btn" onclick="setDpSort('conv-desc',this)">Conv ↓</button>
           </div>
         </div>
       </div>
@@ -1168,7 +1168,7 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
       <div class="dp-sched-head">
         <div>
           <div class="pt" style="font-size:13px">Hourly Schedule with Bid Multipliers</div>
-          <div class="ps">Click cells to cycle: OFF â 0.5x â 0.7x â 1.0x â 1.2x â 1.5x â OFF. Green = peak (â¥1.2x), Purple = normal (0.8-1.19x), Orange = reduced (&lt;0.8x)</div>
+          <div class="ps">Click cells to cycle: OFF → 0.5x → 0.7x → 1.0x → 1.2x → 1.5x → OFF. Green = peak (≥1.2x), Purple = normal (0.8-1.19x), Orange = reduced (&lt;0.8x)</div>
         </div>
         <div style="background:var(--surface2);border-radius:8px;padding:10px;margin-bottom:10px;border:1px solid var(--border)">
           <div style="font-size:10px;color:var(--muted);font-weight:600;margin-bottom:6px">Custom Bid Multiplier Input</div>
@@ -1178,14 +1178,14 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
           </div>
         </div>
         <div class="dp-presets">
-          <button class="dp-preset-btn" onclick="dpPreset('suggested')">ð¯ AI Suggested Bids</button>
-          <button class="dp-preset-btn" onclick="dpPreset('business')">ð¢ Business Hours (9-5)</button>
-          <button class="dp-preset-btn" onclick="dpPreset('peak')">ð¥ Peak Only (10-2, 7-10)</button>
-          <button class="dp-preset-btn" onclick="dpPreset('allday')">âï¸ All Day</button>
-          <button class="dp-preset-btn" onclick="dpPreset('evening')">ð Evening (5-11PM)</button>
-          <button class="dp-preset-btn" onclick="dpPreset('wkend-boost')">ð Weekend Boost</button>
-          <button class="dp-preset-btn" onclick="dpPreset('weekday-only')">ð Weekday Only</button>
-          <button class="dp-preset-btn" onclick="dpPreset('clear')">â Clear All</button>
+          <button class="dp-preset-btn" onclick="dpPreset('suggested')">🎯 AI Suggested Bids</button>
+          <button class="dp-preset-btn" onclick="dpPreset('business')">🏢 Business Hours (9-5)</button>
+          <button class="dp-preset-btn" onclick="dpPreset('peak')">🔥 Peak Only (10-2, 7-10)</button>
+          <button class="dp-preset-btn" onclick="dpPreset('allday')">☀️ All Day</button>
+          <button class="dp-preset-btn" onclick="dpPreset('evening')">🌙 Evening (5-11PM)</button>
+          <button class="dp-preset-btn" onclick="dpPreset('wkend-boost')">🛍 Weekend Boost</button>
+          <button class="dp-preset-btn" onclick="dpPreset('weekday-only')">📉 Weekday Only</button>
+          <button class="dp-preset-btn" onclick="dpPreset('clear')">✕ Clear All</button>
         </div>
       </div>
       <div class="dp-day-tabs" id="dpDayTabs">
@@ -1206,8 +1206,8 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;margin:14px 0;box-shadow:var(--sh)">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
           <div>
-            <div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:12px">ð¥ Performance Heatmap (ACOS by Hour & Day)</div>
-            <div style="font-size:10px;color:var(--muted);margin-top:2px">Green = Low ACOS (good), Red = High ACOS (poor) Â· Best hours highlighted in bottom-left</div>
+            <div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:12px">🔥 Performance Heatmap (ACOS by Hour & Day)</div>
+            <div style="font-size:10px;color:var(--muted);margin-top:2px">Green = Low ACOS (good), Red = High ACOS (poor) · Best hours highlighted in bottom-left</div>
           </div>
         </div>
         <div style="overflow-x:auto;background:var(--surface2);border-radius:8px;padding:10px;border:1px solid var(--border)">
@@ -1215,11 +1215,11 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
         </div>
         <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:10px">
           <div style="background:var(--greenPale);border-radius:6px;padding:8px;border-left:3px solid var(--green)">
-            <div style="font-weight:600;font-size:11px;color:var(--green)">ð¢ Best Converting Hours</div>
+            <div style="font-weight:600;font-size:11px;color:var(--green)">🟢 Best Converting Hours</div>
             <div style="font-size:10px;color:var(--muted);margin-top:2px" id="dpBestHours">9-1PM, 7-9PM (EST)</div>
           </div>
           <div style="background:var(--redPale);border-radius:6px;padding:8px;border-left:3px solid var(--red)">
-            <div style="font-weight:600;font-size:11px;color:var(--red)">ð´ High Spend Waste</div>
+            <div style="font-weight:600;font-size:11px;color:var(--red)">🔴 High Spend Waste</div>
             <div style="font-size:10px;color:var(--muted);margin-top:2px" id="dpWasteHours">2-4AM, 12-2AM (low traffic)</div>
           </div>
         </div>
@@ -1227,18 +1227,18 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
 
       <div class="dp-legend">
         <div class="dp-legend-item"><div class="dp-legend-swatch" style="background:linear-gradient(135deg,#6d28d9,#8b5cf6)"></div> Normal (0.8-1.19x)</div>
-        <div class="dp-legend-item"><div class="dp-legend-swatch" style="background:linear-gradient(135deg,#059669,#34d399)"></div> Peak Boost (â¥1.2x)</div>
+        <div class="dp-legend-item"><div class="dp-legend-swatch" style="background:linear-gradient(135deg,#059669,#34d399)"></div> Peak Boost (≥1.2x)</div>
         <div class="dp-legend-item"><div class="dp-legend-swatch" style="background:linear-gradient(135deg,#d97706,#f59e0b)"></div> Reduced (&lt;0.8x)</div>
         <div class="dp-legend-item"><div class="dp-legend-swatch" style="background:var(--surface3)"></div> Off</div>
       </div>
       <div class="dp-revert-info">
-        <strong>â¹ï¸ Bid Revert:</strong> When a scheduled time slot ends, bids automatically revert to the base campaign bid. Multipliers are applied only during active hours.
+        <strong>ℹ️ Bid Revert:</strong> When a scheduled time slot ends, bids automatically revert to the base campaign bid. Multipliers are applied only during active hours.
       </div>
     </div>
 
     <!-- Summary -->
     <div class="dp-summary">
-      <div class="pt" style="font-size:13px">ð Day Parting Summary</div>
+      <div class="pt" style="font-size:13px">📊 Day Parting Summary</div>
       <div class="dp-summary-grid" id="dpSummary">
         <div class="dp-summary-card"><div class="dp-summary-val" id="dpSumCamps">0</div><div class="dp-summary-lbl">Campaigns Scheduled</div></div>
         <div class="dp-summary-card"><div class="dp-summary-val" id="dpSumHours">0</div><div class="dp-summary-lbl">Active Hours / Day</div></div>
@@ -1252,8 +1252,8 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
 <!-- ===== SCHEDULE ===== -->
 <div class="pg" id="pg-schedule">
   <div class="pg-head">
-    <div><div class="pg-title">Staff Work Schedule</div><div class="pg-sub">Daily task cadence â CA, MX</div></div>
-    <div class="today-bdg">ð <strong id="todayDate"></strong> &nbsp;Â·&nbsp; <span id="todayDue" style="color:var(--gold);font-weight:700"></span> tasks due</div>
+    <div><div class="pg-title">Staff Work Schedule</div><div class="pg-sub">Daily task cadence — CA, MX</div></div>
+    <div class="today-bdg">📅 <strong id="todayDate"></strong> &nbsp;·&nbsp; <span id="todayDue" style="color:var(--gold);font-weight:700"></span> tasks due</div>
   </div>
   <div class="prog-sec">
     <div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:12px;margin-bottom:13px">Today's Completion</div>
@@ -1265,70 +1265,70 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
 <!-- ===== REPORTS & ACTIONS ===== -->
 <div class="pg" id="pg-reports">
   <div class="pg-head">
-    <div><div class="pg-title">Reports & AI Actions</div><div class="pg-sub">Per-market reports â AI generates specific actions you approve directly</div></div>
-    <button class="bsm p" onclick="toast('Generating all reports...','in')">â Export All</button>
+    <div><div class="pg-title">Reports & AI Actions</div><div class="pg-sub">Per-market reports → AI generates specific actions you approve directly</div></div>
+    <button class="bsm p" onclick="toast('Generating all reports...','in')">↓ Export All</button>
   </div>
 
   <!-- CLAUDE AI ANALYSIS -->
   <div class="claude-panel">
     <div class="claude-head">
-      <div class="claude-ico">â¨</div>
+      <div class="claude-ico">✨</div>
       <div><div class="claude-title">Claude AI Deep Analysis</div><div class="claude-sub">Analyzes all report data across markets and generates advanced recommendations</div></div>
       <div class="claude-status"><div class="dot" id="claudeDot" style="background:var(--muted)"></div><span id="claudeStatusLbl">Not connected</span></div>
     </div>
     <button class="claude-analyze-btn" id="claudeBtn" onclick="runClaudeAnalysis()">
-      <span>â¨</span><span id="claudeBtnTxt">Analyze with Claude AI</span>
+      <span>✨</span><span id="claudeBtnTxt">Analyze with Claude AI</span>
     </button>
     <div class="claude-output" id="claudeOutput" style="display:none"></div>
   </div>
 
   <!-- AI COMMAND CENTER SECTION -->
   <div class="ai-section">
-    <div class="ai-section-title">ð§  AI Command Center</div>
+    <div class="ai-section-title">🧠 AI Command Center</div>
     <div class="ai-section-sub">Real-time AI insights, competitor intelligence, and untapped opportunities</div>
 
     <!-- Continuous Campaign Monitor -->
     <div style="margin-bottom:16px">
       <div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:12px;color:var(--text);margin-bottom:8px;display:flex;align-items:center;gap:6px">
-        <span>ð</span> Continuous Campaign Monitor
+        <span>📊</span> Continuous Campaign Monitor
       </div>
       <div id="aiCampaignMonitor" style="min-height:100px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:11px">
         Click the button below to run analysis
       </div>
-      <button class="bsm p" style="margin-top:8px;width:100%" onclick="runContinuousAnalysis()">ð Run Campaign Analysis</button>
+      <button class="bsm p" style="margin-top:8px;width:100%" onclick="runContinuousAnalysis()">📊 Run Campaign Analysis</button>
     </div>
 
     <!-- Competitor Intelligence -->
     <div style="margin-bottom:16px;border-top:1px solid var(--border);padding-top:12px">
       <div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:12px;color:var(--text);margin-bottom:8px;display:flex;align-items:center;gap:6px">
-        <span>ð¯</span> Competitor Intelligence
+        <span>🎯</span> Competitor Intelligence
       </div>
       <div id="aiCompetitorIntel" style="min-height:100px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:11px">
         Click the button below to run analysis
       </div>
-      <button class="bsm p" style="margin-top:8px;width:100%" onclick="runCompetitorAnalysis()">ð¯ Analyze Competitors</button>
+      <button class="bsm p" style="margin-top:8px;width:100%" onclick="runCompetitorAnalysis()">🎯 Analyze Competitors</button>
     </div>
 
     <!-- Keyword Opportunity Scanner -->
     <div style="margin-bottom:16px;border-top:1px solid var(--border);padding-top:12px">
       <div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:12px;color:var(--text);margin-bottom:8px;display:flex;align-items:center;gap:6px">
-        <span>ð</span> Keyword Opportunity Scanner
+        <span>🔍</span> Keyword Opportunity Scanner
       </div>
       <div id="aiKeywordOpps" style="min-height:100px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:11px">
         Click the button below to scan opportunities
       </div>
-      <button class="bsm p" style="margin-top:8px;width:100%" onclick="runKeywordDiscovery()">ð Scan Keywords</button>
+      <button class="bsm p" style="margin-top:8px;width:100%" onclick="runKeywordDiscovery()">🔍 Scan Keywords</button>
     </div>
 
     <!-- Unadvertised Product Demand Scanner -->
     <div style="border-top:1px solid var(--border);padding-top:12px">
       <div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:12px;color:var(--text);margin-bottom:8px;display:flex;align-items:center;gap:6px">
-        <span>ð</span> Unadvertised Product Demand Scanner
+        <span>📊</span> Unadvertised Product Demand Scanner
       </div>
       <div id="aiUnadvertisedDemand" style="min-height:100px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:11px">
         Click the button below to scan for opportunities
       </div>
-      <button class="bsm p" style="margin-top:8px;width:100%" onclick="scanUnadvertisedDemand()">ð Scan Unadvertised Products</button>
+      <button class="bsm p" style="margin-top:8px;width:100%" onclick="scanUnadvertisedDemand()">📊 Scan Unadvertised Products</button>
     </div>
   </div>
 
@@ -1341,23 +1341,23 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
       <button class="dp" onclick="setRPreset('mtd',this)">Month to Date</button>
       <button class="dp" onclick="setRPreset('lm',this)">Last Month</button>
       <button class="dp" onclick="setRPreset('qtd',this)">Quarter</button>
-      <button class="dp" onclick="setRPreset('custom',this)">Custom â¾</button>
+      <button class="dp" onclick="setRPreset('custom',this)">Custom ▾</button>
     </div>
     <div class="dsep"></div>
     <div class="dcust" id="rCustInputs" style="display:none">
       <input class="dinput" type="date" id="rFrom" value="2026-02-12">
-      <span style="font-size:10px;color:var(--muted)">â</span>
+      <span style="font-size:10px;color:var(--muted)">→</span>
       <input class="dinput" type="date" id="rTo" value="2026-03-12">
       <button class="dapply" onclick="applyRCustom()">Apply</button>
     </div>
-    <div class="ddisplay"><span>Showing:</span><span class="ddval" id="rDispVal">Feb 27 â Mar 12, 2026</span></div>
+    <div class="ddisplay"><span>Showing:</span><span class="ddval" id="rDispVal">Feb 27 – Mar 12, 2026</span></div>
   </div>
 
   <!-- MARKET TABS FOR REPORTS -->
   <div class="reports-market-tabs">
-    <button class="rmt act" onclick="switchRMkt('CA',this)">ð¨ð¦ CA</button>
-    <button class="rmt" onclick="switchRMkt('MX',this)">ð²ð½ MX</button>
-    <button class="rmt" onclick="switchRMkt('ALL',this)">ð All Markets</button>
+    <button class="rmt act" onclick="switchRMkt('CA',this)">🇨🇦 CA</button>
+    <button class="rmt" onclick="switchRMkt('MX',this)">🇲🇽 MX</button>
+    <button class="rmt" onclick="switchRMkt('ALL',this)">🌐 All Markets</button>
   </div>
 
   <div class="reports-grid" id="reportsGrid"></div>
@@ -1365,8 +1365,8 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
   <!-- AI ACTIONS FROM REPORTS -->
   <div>
     <div class="ras-head">
-      <div><div class="ras-title">AI Actions from Reports</div><div class="ras-sub" id="rasSubLbl">Generated from 14-day analysis Â· US Â· Review and approve to execute</div></div>
-      <button class="bsm p" onclick="approveAllActions()">â Approve All Actions</button>
+      <div><div class="ras-title">AI Actions from Reports</div><div class="ras-sub" id="rasSubLbl">Generated from 14-day analysis · US · Review and approve to execute</div></div>
+      <button class="bsm p" onclick="approveAllActions()">✓ Approve All Actions</button>
     </div>
     <div class="acg" id="actionGrid"></div>
   </div>
@@ -1374,16 +1374,16 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
   <!-- PRODUCT TARGET SUGGESTIONS -->
   <div class="pt-panel">
     <div class="pt-head">
-      <div><div class="pt" style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:12px">Product Target Suggestions</div><div class="ps">Competitor & complementary ASINs to target â with reference images</div></div>
+      <div><div class="pt" style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:12px">Product Target Suggestions</div><div class="ps">Competitor & complementary ASINs to target — with reference images</div></div>
       <div style="font-size:9px;color:var(--muted)" id="ptMktLbl">US Market</div>
     </div>
     <div class="pt-grid" id="ptGrid"></div>
   </div>
 
-  <!-- SEARCH TERM â PRODUCT TARGET MAPPING -->
+  <!-- SEARCH TERM → PRODUCT TARGET MAPPING -->
   <div class="pt-panel">
     <div class="pt-head">
-      <div><div class="pt" style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:12px">Search Term â Product Target Mapping</div><div class="ps">Top-converting search terms that match competitor ASINs â ready to target</div></div>
+      <div><div class="pt" style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:12px">Search Term → Product Target Mapping</div><div class="ps">Top-converting search terms that match competitor ASINs — ready to target</div></div>
     </div>
     <div id="stMappingGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;padding:10px"></div>
   </div>
@@ -1391,10 +1391,10 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
 <!-- ===== APP SETTINGS / ADMIN ===== -->
 <div class="pg" id="pg-admin">
   <div class="pg-head">
-    <div><div class="pg-title">App Settings</div><div class="pg-sub">Update campaign targets, team settings, and data â changes apply instantly without redeployment</div></div>
+    <div><div class="pg-title">App Settings</div><div class="pg-sub">Update campaign targets, team settings, and data — changes apply instantly without redeployment</div></div>
     <div style="display:flex;gap:8px">
-      <button class="bsm" onclick="exportSettings()">â Export Config</button>
-      <button class="bsm g" onclick="saveAllSettings()">ð¾ Save All Changes</button>
+      <button class="bsm" onclick="exportSettings()">↓ Export Config</button>
+      <button class="bsm g" onclick="saveAllSettings()">💾 Save All Changes</button>
     </div>
   </div>
 
@@ -1402,16 +1402,16 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
 
     <!-- OPTIMIZATION TARGETS -->
     <div class="panel">
-      <div class="ph"><div><div class="pt">ð¯ Optimization Targets</div><div class="ps">ACOS goals and bid strategy per market</div></div></div>
+      <div class="ph"><div><div class="pt">🎯 Optimization Targets</div><div class="ps">ACOS goals and bid strategy per market</div></div></div>
       <div style="padding:16px;display:flex;flex-direction:column;gap:12px">
         <div style="display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;padding:10px 13px;background:var(--surface2);border-radius:8px;border:1px solid var(--border)">
-          <div style="font-size:18px">ð¨ð¦</div>
-          <div><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:11px">CA â Target ACOS</div><div style="font-size:9px;color:var(--muted)">AI optimizes bids toward this</div></div>
+          <div style="font-size:18px">🇨🇦</div>
+          <div><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:11px">CA — Target ACOS</div><div style="font-size:9px;color:var(--muted)">AI optimizes bids toward this</div></div>
           <div style="display:flex;align-items:center;gap:6px"><input class="lm-set-input" id="acos-CA" value="32" type="number" min="10" max="70" style="width:65px;text-align:center"><span style="font-size:11px;color:var(--muted)">%</span></div>
         </div>
         <div style="display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;padding:10px 13px;background:var(--surface2);border-radius:8px;border:1px solid var(--border)">
-          <div style="font-size:18px">ð²ð½</div>
-          <div><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:11px">MX â Target ACOS</div><div style="font-size:9px;color:var(--muted)">AI optimizes bids toward this</div></div>
+          <div style="font-size:18px">🇲🇽</div>
+          <div><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:11px">MX — Target ACOS</div><div style="font-size:9px;color:var(--muted)">AI optimizes bids toward this</div></div>
           <div style="display:flex;align-items:center;gap:6px"><input class="lm-set-input" id="acos-MX" value="35" type="number" min="10" max="70" style="width:65px;text-align:center"><span style="font-size:11px;color:var(--muted)">%</span></div>
         </div>
 
@@ -1437,8 +1437,8 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
         <div><div class="fl">AI Spend Optimization Rule</div><div style="font-size:9px;color:var(--muted);margin-bottom:6px">Optimize campaigns where Spend > $X within selected date range</div><div style="display:flex;gap:5px;align-items:center"><span style="font-size:11px;color:var(--muted)">$</span><input class="lm-set-input" id="aiSpendOptRule" value="15" type="number" style="flex:1"><span style="font-size:9px;color:var(--muted)">/campaign</span></div></div>
         <div><div class="fl">Bidding Strategy (Default)</div>
           <select class="lm-set-select" id="defBidStrategy" style="width:100%">
-            <option value="dynamic_up">Dynamic Bids â Up Only</option>
-            <option value="dynamic_both">Dynamic Bids â Up & Down</option>
+            <option value="dynamic_up">Dynamic Bids — Up Only</option>
+            <option value="dynamic_both">Dynamic Bids — Up & Down</option>
             <option value="fixed">Fixed Bids</option>
           </select>
         </div>
@@ -1447,25 +1447,25 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
 
     <!-- BRAND / PRODUCT INFO -->
     <div class="panel">
-      <div class="ph"><div><div class="pt">ð·ï¸ Brand & Product Info</div><div class="ps">Used for campaign naming and reporting</div></div></div>
+      <div class="ph"><div><div class="pt">🏷️ Brand & Product Info</div><div class="ps">Used for campaign naming and reporting</div></div></div>
       <div style="padding:16px;display:flex;flex-direction:column;gap:11px">
         <div><div class="fl">Brand Name</div><input class="lm-set-input" id="brandName" value="Purple Essences" style="width:100%"></div>
         <div><div class="fl">Brand Abbreviation (for campaign names)</div><input class="lm-set-input" id="brandAbbr" value="PE" maxlength="6" style="width:100%"></div>
-        <div><div class="fl">Portfolio Name</div><input class="lm-set-input" id="portfolioName" value="Purple Essences â All Products" style="width:100%"></div>
+        <div><div class="fl">Portfolio Name</div><input class="lm-set-input" id="portfolioName" value="Purple Essences — All Products" style="width:100%"></div>
         <div><div class="fl">Primary Marketplace (default view)</div>
           <select class="lm-set-select" id="primaryMkt" style="width:100%">
-            <option value="CA" selected>ð¨ð¦ Canada</option>
-            <option value="MX">ð²ð½ Mexico</option>
+            <option value="CA" selected>🇨🇦 Canada</option>
+            <option value="MX">🇲🇽 Mexico</option>
           </select>
         </div>
         <div><div class="fl">Alert Email(s)</div><input class="lm-set-input" id="alertEmailsAdmin" value="kavin@purpleessences.com" style="width:100%"><div style="font-size:9px;color:var(--muted);margin-top:4px">Separate multiple emails with commas</div></div>
         <div><div class="fl">Timezone</div>
           <select class="lm-set-select" id="timezone" style="width:100%">
-            <option value="EST">EST â Eastern (US)</option>
-            <option value="CST">CST â Central (US)</option>
-            <option value="PST">PST â Pacific (US)</option>
-            <option value="GMT">GMT â London</option>
-            <option value="IST">IST â India</option>
+            <option value="EST">EST — Eastern (US)</option>
+            <option value="CST">CST — Central (US)</option>
+            <option value="PST">PST — Pacific (US)</option>
+            <option value="GMT">GMT — London</option>
+            <option value="IST">IST — India</option>
           </select>
         </div>
       </div>
@@ -1473,7 +1473,7 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
 
     <!-- CAMPAIGN RULES -->
     <div class="panel">
-      <div class="ph"><div><div class="pt">ð¤ AI Rule Configuration</div><div class="ps">Thresholds that drive AI action suggestions</div></div></div>
+      <div class="ph"><div><div class="pt">🤖 AI Rule Configuration</div><div class="ps">Thresholds that drive AI action suggestions</div></div></div>
       <div style="padding:16px;display:flex;flex-direction:column;gap:10px" id="rulesContainer">
         <div style="font-size:10px;color:var(--muted);font-weight:500;margin-bottom:4px">Rules are applied when generating AI actions. Edit values and save.</div>
         <!-- Rules rendered by JS -->
@@ -1485,7 +1485,7 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
 
     <!-- TEAM & SCHEDULE SETTINGS -->
     <div class="panel">
-      <div class="ph"><div><div class="pt">ð¥ Team & Schedule</div><div class="ps">Staff roles and task cadence settings</div></div></div>
+      <div class="ph"><div><div class="pt">👥 Team & Schedule</div><div class="ps">Staff roles and task cadence settings</div></div></div>
       <div style="padding:16px;display:flex;flex-direction:column;gap:12px">
         <div>
           <div class="fl">Staff Members</div>
@@ -1510,7 +1510,7 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
     <!-- CUSTOM ASINS / PRODUCTS -->
     <div class="panel" style="grid-column:1/-1">
       <div class="ph">
-        <div><div class="pt">ð¦ Tracked ASINs & Products</div><div class="ps">Add or remove products from the dashboard â changes apply immediately</div></div>
+        <div><div class="pt">📦 Tracked ASINs & Products</div><div class="ps">Add or remove products from the dashboard — changes apply immediately</div></div>
         <button class="bsm p" onclick="openAddAsin()">+ Add ASIN</button>
       </div>
       <div style="padding:12px 16px">
@@ -1520,7 +1520,7 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
 
     <!-- CHANGELOG -->
     <div class="panel" style="grid-column:1/-1">
-      <div class="ph"><div><div class="pt">ð Change Log</div><div class="ps">All settings changes made within the app â full audit trail</div></div><button class="bsm" onclick="clearLog()">Clear Log</button></div>
+      <div class="ph"><div><div class="pt">📋 Change Log</div><div class="ps">All settings changes made within the app — full audit trail</div></div><button class="bsm" onclick="clearLog()">Clear Log</button></div>
       <div style="padding:12px 16px;max-height:220px;overflow-y:auto" id="changeLog">
         <div style="font-size:10px;color:var(--muted);text-align:center;padding:20px">No changes logged yet</div>
       </div>
@@ -1531,39 +1531,39 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
       <div class="ph" style="background:linear-gradient(135deg,#f5f3ff,#ede9fe)">
         <div>
           <div class="pt" style="display:flex;align-items:center;gap:8px">
-            <span style="font-size:16px">ð</span> App Update
+            <span style="font-size:16px">🔄</span> App Update
             <span style="font-size:9px;padding:2px 8px;border-radius:10px;background:#6d28d9;color:#fff;font-weight:700" id="currentVersionBadge">v4b</span>
           </div>
-          <div class="ps">Upload a new version of the app â your campaign data, settings, rules, staff and ASINs are preserved automatically</div>
+          <div class="ps">Upload a new version of the app — your campaign data, settings, rules, staff and ASINs are preserved automatically</div>
         </div>
         <div style="display:flex;gap:8px;align-items:center">
-          <button class="bsm" onclick="backupAndExport()">ð¾ Backup Current</button>
-          <button class="bsm p" onclick="document.getElementById('updateFileInput').click()">â¬ Upload New Version</button>
+          <button class="bsm" onclick="backupAndExport()">💾 Backup Current</button>
+          <button class="bsm p" onclick="document.getElementById('updateFileInput').click()">⬆ Upload New Version</button>
           <input type="file" id="updateFileInput" accept=".html" style="display:none" onchange="handleUpdateFile(this)">
         </div>
       </div>
 
       <!-- Status: idle -->
       <div id="updateIdle" style="padding:20px 20px;display:flex;align-items:center;gap:16px">
-        <div style="width:48px;height:48px;border-radius:12px;background:#f5f3ff;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">ð</div>
+        <div style="width:48px;height:48px;border-radius:12px;background:#f5f3ff;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">🗂</div>
         <div>
           <div style="font-weight:700;font-size:12px;margin-bottom:4px">How it works</div>
           <div style="font-size:10px;color:var(--muted);line-height:1.7">
             1. <b>Download</b> a new version of the app (e.g. sent by your developer)<br>
             2. Click <b>Upload New Version</b> and select the file<br>
-            3. The app shows you a <b>diff</b> â what's changed vs what's preserved<br>
+            3. The app shows you a <b>diff</b> — what's changed vs what's preserved<br>
             4. Click <b>Apply Update</b> and your browser downloads the merged file<br>
-            5. <b>Replace</b> the file on Vercel â zero data loss
+            5. <b>Replace</b> the file on Vercel — zero data loss
           </div>
         </div>
         <div style="margin-left:auto;text-align:right;flex-shrink:0">
           <div style="font-size:9px;color:var(--muted);margin-bottom:3px">Always preserved</div>
           <div style="display:flex;flex-direction:column;gap:3px">
-            <span style="font-size:9px;padding:2px 8px;border-radius:4px;background:#dcfce7;color:#16a34a;font-weight:600">â Campaign data (MKTS)</span>
-            <span style="font-size:9px;padding:2px 8px;border-radius:4px;background:#dcfce7;color:#16a34a;font-weight:600">â Schedule tasks</span>
-            <span style="font-size:9px;padding:2px 8px;border-radius:4px;background:#dcfce7;color:#16a34a;font-weight:600">â AI rules & settings</span>
-            <span style="font-size:9px;padding:2px 8px;border-radius:4px;background:#dcfce7;color:#16a34a;font-weight:600">â Staff & ASINs</span>
-            <span style="font-size:9px;padding:2px 8px;border-radius:4px;background:#dcfce7;color:#16a34a;font-weight:600">â All localStorage data</span>
+            <span style="font-size:9px;padding:2px 8px;border-radius:4px;background:#dcfce7;color:#16a34a;font-weight:600">✓ Campaign data (MKTS)</span>
+            <span style="font-size:9px;padding:2px 8px;border-radius:4px;background:#dcfce7;color:#16a34a;font-weight:600">✓ Schedule tasks</span>
+            <span style="font-size:9px;padding:2px 8px;border-radius:4px;background:#dcfce7;color:#16a34a;font-weight:600">✓ AI rules & settings</span>
+            <span style="font-size:9px;padding:2px 8px;border-radius:4px;background:#dcfce7;color:#16a34a;font-weight:600">✓ Staff & ASINs</span>
+            <span style="font-size:9px;padding:2px 8px;border-radius:4px;background:#dcfce7;color:#16a34a;font-weight:600">✓ All localStorage data</span>
           </div>
         </div>
       </div>
@@ -1572,7 +1572,7 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
       <div id="updateAnalyzing" style="padding:20px;display:none;align-items:center;gap:12px">
         <div style="width:36px;height:36px;border-radius:50%;border:3px solid #e0d7ff;border-top-color:#6d28d9;animation:spin .8s linear infinite;flex-shrink:0"></div>
         <div>
-          <div style="font-weight:700;font-size:12px">Analyzing update fileâ¦</div>
+          <div style="font-weight:700;font-size:12px">Analyzing update file…</div>
           <div style="font-size:10px;color:var(--muted)" id="updateAnalyzingMsg">Reading file structure</div>
         </div>
       </div>
@@ -1581,20 +1581,20 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
       <div id="updatePreview" style="padding:16px 20px;display:none">
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:14px">
           <div style="padding:12px;border-radius:8px;background:#dcfce7;border:1.5px solid #bbf7d0;text-align:center">
-            <div style="font-size:18px;margin-bottom:4px">â</div>
+            <div style="font-size:18px;margin-bottom:4px">✅</div>
             <div style="font-size:16px;font-weight:800;color:#16a34a" id="preservedCount">0</div>
             <div style="font-size:9px;color:#16a34a;font-weight:600">Items Preserved</div>
-            <div style="font-size:8px;color:#16a34a;margin-top:2px">Campaign data, settings, rulesâ¦</div>
+            <div style="font-size:8px;color:#16a34a;margin-top:2px">Campaign data, settings, rules…</div>
           </div>
           <div style="padding:12px;border-radius:8px;background:#eff6ff;border:1.5px solid #bfdbfe;text-align:center">
-            <div style="font-size:18px;margin-bottom:4px">â¨</div>
+            <div style="font-size:18px;margin-bottom:4px">✨</div>
             <div style="font-size:16px;font-weight:800;color:#1d4ed8" id="newFeaturesCount">0</div>
             <div style="font-size:9px;color:#1d4ed8;font-weight:600">New / Updated Sections</div>
-            <div style="font-size:8px;color:#1d4ed8;margin-top:2px">Logic, UI, bug fixesâ¦</div>
+            <div style="font-size:8px;color:#1d4ed8;margin-top:2px">Logic, UI, bug fixes…</div>
           </div>
           <div style="padding:12px;border-radius:8px;background:#fef3c7;border:1.5px solid #fde68a;text-align:center">
-            <div style="font-size:18px;margin-bottom:4px">â¡</div>
-            <div style="font-size:16px;font-weight:800;color:#b45309" id="versionLabel">v4b â ?</div>
+            <div style="font-size:18px;margin-bottom:4px">⚡</div>
+            <div style="font-size:16px;font-weight:800;color:#b45309" id="versionLabel">v4b → ?</div>
             <div style="font-size:9px;color:#b45309;font-weight:600">Version Change</div>
             <div style="font-size:8px;color:#b45309;margin-top:2px">Detected from file</div>
           </div>
@@ -1602,26 +1602,26 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
 
         <div style="border:1.5px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:14px">
           <div style="background:var(--surface2);padding:8px 12px;font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:10px;font-weight:700;display:flex;gap:10px">
-            <span style="color:#16a34a">â Preserved from current app</span>
-            <span style="color:#1d4ed8">â Updated in new version</span>
-            <span style="color:#dc2626">â Removed in new version</span>
+            <span style="color:#16a34a">● Preserved from current app</span>
+            <span style="color:#1d4ed8">● Updated in new version</span>
+            <span style="color:#dc2626">● Removed in new version</span>
           </div>
           <div style="max-height:220px;overflow-y:auto;padding:10px 12px;font-size:10px;line-height:1.8;font-family:monospace" id="updateDiff"></div>
         </div>
 
         <div style="display:flex;gap:10px;justify-content:flex-end">
-          <button class="bsm" onclick="cancelUpdate()" style="color:#dc2626;border-color:#fecaca">â Cancel</button>
-          <button class="bsm" onclick="backupAndExport()" style="color:var(--muted)">ð¾ Backup First</button>
-          <button class="bsm p" onclick="applyUpdate()" style="font-size:11px;padding:8px 18px">â¡ Apply Update & Download</button>
+          <button class="bsm" onclick="cancelUpdate()" style="color:#dc2626;border-color:#fecaca">✕ Cancel</button>
+          <button class="bsm" onclick="backupAndExport()" style="color:var(--muted)">💾 Backup First</button>
+          <button class="bsm p" onclick="applyUpdate()" style="font-size:11px;padding:8px 18px">⚡ Apply Update & Download</button>
         </div>
       </div>
 
       <!-- Status: success -->
       <div id="updateSuccess" style="padding:20px;display:none;align-items:center;gap:16px">
-        <div style="font-size:36px">ð</div>
+        <div style="font-size:36px">🎉</div>
         <div>
           <div style="font-weight:700;font-size:13px;margin-bottom:4px">Update merged successfully!</div>
-          <div style="font-size:10px;color:var(--muted);line-height:1.7">Your updated app has been downloaded. <strong>Replace the file on Vercel</strong> to deploy the update.<br>All your data was preserved â drag the new file to <code style="background:var(--surface2);padding:1px 5px;border-radius:3px;font-size:9px">vercel.com/dashboard</code> to redeploy.</div>
+          <div style="font-size:10px;color:var(--muted);line-height:1.7">Your updated app has been downloaded. <strong>Replace the file on Vercel</strong> to deploy the update.<br>All your data was preserved — drag the new file to <code style="background:var(--surface2);padding:1px 5px;border-radius:3px;font-size:9px">vercel.com/dashboard</code> to redeploy.</div>
         </div>
         <button class="bsm" onclick="resetUpdateUI()" style="margin-left:auto;flex-shrink:0">Update Another</button>
       </div>
@@ -1633,10 +1633,10 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
       <div class="ph">
         <div>
           <div class="pt" style="display:flex;align-items:center;gap:8px">
-            ð Version History
-            <span style="font-size:9px;padding:2px 8px;border-radius:10px;background:var(--surface2);color:var(--muted);font-weight:700;border:1px solid var(--border)" id="vhCurrentBadge">v4b â Current</span>
+            📜 Version History
+            <span style="font-size:9px;padding:2px 8px;border-radius:10px;background:var(--surface2);color:var(--muted);font-weight:700;border:1px solid var(--border)" id="vhCurrentBadge">v4b — Current</span>
           </div>
-          <div class="ps">All updates applied to this app â automatically recorded when you use the Update system</div>
+          <div class="ps">All updates applied to this app — automatically recorded when you use the Update system</div>
         </div>
         <button class="bsm" onclick="clearVersionHistory()" style="color:var(--muted)">Clear History</button>
       </div>
@@ -1645,14 +1645,14 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
       </div>
       <!-- Empty state -->
       <div id="vhEmpty" style="padding:28px 16px;text-align:center">
-        <div style="font-size:28px;margin-bottom:8px;opacity:.3">ð¦</div>
+        <div style="font-size:28px;margin-bottom:8px;opacity:.3">📦</div>
         <div style="font-size:11px;font-weight:600;color:var(--muted);margin-bottom:4px">No updates applied yet</div>
         <div style="font-size:10px;color:var(--muted)">Version history will appear here each time you apply an update using the panel above.</div>
         <div style="margin-top:14px;padding:10px 14px;background:var(--surface2);border-radius:8px;border:1px solid var(--border);display:inline-block;text-align:left">
           <div style="font-size:9px;font-weight:700;color:var(--purple);margin-bottom:5px;font-family:'Inter',system-ui,-apple-system,sans-serif">CURRENT VERSION</div>
           <div style="display:flex;align-items:center;gap:8px">
             <span style="font-size:13px;font-weight:800;font-family:'Inter',system-ui,-apple-system,sans-serif" id="vhInitialVersion">v4b</span>
-            <span style="font-size:9px;color:var(--muted)">â installed on first deploy</span>
+            <span style="font-size:9px;color:var(--muted)">— installed on first deploy</span>
           </div>
         </div>
       </div>
@@ -1662,13 +1662,13 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
     <div class="panel" style="margin-top:16px;grid-column:1/-1">
       <div class="ph">
         <div>
-          <div class="pt">ð Data Store</div>
-          <div class="ps">All app data is stored in one unified location â survives updates, never lost</div>
+          <div class="pt">🗄 Data Store</div>
+          <div class="ps">All app data is stored in one unified location — survives updates, never lost</div>
         </div>
         <div style="display:flex;gap:7px">
-          <button class="bsm" onclick="peStore_save();toast('Data saved','ok')">ð¾ Save Now</button>
-          <button class="bsm" onclick="peStore_exportJSON()">ð¤ Export Data</button>
-          <button class="bsm" onclick="document.getElementById('peImportFile').click()">ð¥ Import Data</button>
+          <button class="bsm" onclick="peStore_save();toast('Data saved','ok')">💾 Save Now</button>
+          <button class="bsm" onclick="peStore_exportJSON()">📤 Export Data</button>
+          <button class="bsm" onclick="document.getElementById('peImportFile').click()">📥 Import Data</button>
           <input type="file" id="peImportFile" accept=".json" style="display:none" onchange="peStore_importJSON(this.files[0]);this.value=''">
         </div>
       </div>
@@ -1677,20 +1677,20 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
         </div>
         <div style="background:var(--surface2);border:1.5px solid var(--border);border-radius:9px;padding:12px 14px;font-size:10px;color:var(--muted);line-height:1.7">
           <strong style="color:var(--text)">How data persistence works:</strong><br>
-          â¢ All data stored under one key: <code style="background:var(--surface3);padding:1px 5px;border-radius:3px;font-size:9px">pe_appdata</code> in localStorage<br>
-          â¢ Auto-saves every 2 seconds after any change<br>
-          â¢ Automatic backup created before every app update<br>
-          â¢ Schema versioning ensures data survives structural changes<br>
-          â¢ Export/Import lets you move data between browsers or create manual backups<br>
-          â¢ Day parting schedules, rules, staff, ASINs, credentials â all in one place
+          • All data stored under one key: <code style="background:var(--surface3);padding:1px 5px;border-radius:3px;font-size:9px">pe_appdata</code> in localStorage<br>
+          • Auto-saves every 2 seconds after any change<br>
+          • Automatic backup created before every app update<br>
+          • Schema versioning ensures data survives structural changes<br>
+          • Export/Import lets you move data between browsers or create manual backups<br>
+          • Day parting schedules, rules, staff, ASINs, credentials — all in one place
         </div>
         <div style="display:flex;gap:7px;align-items:center">
-          <button class="bsm" onclick="peStore_restoreBackup()" style="color:var(--gold);border-color:var(--gold)">â© Restore Last Backup</button>
+          <button class="bsm" onclick="peStore_restoreBackup()" style="color:var(--gold);border-color:var(--gold)">↩ Restore Last Backup</button>
           <span style="font-size:9px;color:var(--muted)" id="peBackupInfo">No backup info available</span>
         </div>
         <div style="margin-top:12px;background:linear-gradient(135deg,#faf5ff,#fff);border:1.5px solid rgba(109,40,217,.2);border-radius:9px;padding:14px 16px">
           <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
-            <div style="width:28px;height:28px;background:linear-gradient(135deg,#f59e0b,#fbbf24);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:14px">âï¸</div>
+            <div style="width:28px;height:28px;background:linear-gradient(135deg,#f59e0b,#fbbf24);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:14px">☁️</div>
             <div>
               <div style="font-family:'Inter',system-ui,sans-serif;font-weight:700;font-size:13px">Cloud Sync (Firebase)</div>
               <div style="font-size:11px;color:var(--muted)">Real-time sync across all devices and users</div>
@@ -1701,8 +1701,8 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
             </div>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
-            <button class="bsm p" onclick="fbForceSync()" style="padding:8px">âï¸ Push to Cloud</button>
-            <button class="bsm" onclick="fbPull();toast('Pulled latest from cloud','ok')" style="padding:8px">â¬ï¸ Pull from Cloud</button>
+            <button class="bsm p" onclick="fbForceSync()" style="padding:8px">☁️ Push to Cloud</button>
+            <button class="bsm" onclick="fbPull();toast('Pulled latest from cloud','ok')" style="padding:8px">⬇️ Pull from Cloud</button>
           </div>
           <div style="font-size:10px;color:var(--muted);line-height:1.6">
             Database: <code style="background:var(--surface3);padding:1px 5px;border-radius:3px;font-size:9px">purple-essences-cc-default-rtdb</code><br>
@@ -1722,34 +1722,34 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
   <div class="modal" style="width:680px;max-width:96vw">
     <div class="moh" style="background:linear-gradient(135deg,#fdf2f8,#fff)">
       <div style="display:flex;align-items:center;gap:10px">
-        <div style="width:30px;height:30px;background:linear-gradient(135deg,#be185d,#f472b6);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px">ð</div>
-        <div><div class="mot" style="color:#be185d">New Product Launch â Campaign Builder</div><div style="font-size:10px;color:var(--muted);margin-top:2px" id="lmAsinLbl">ASIN: â</div></div>
+        <div style="width:30px;height:30px;background:linear-gradient(135deg,#be185d,#f472b6);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px">🚀</div>
+        <div><div class="mot" style="color:#be185d">New Product Launch — Campaign Builder</div><div style="font-size:10px;color:var(--muted);margin-top:2px" id="lmAsinLbl">ASIN: —</div></div>
       </div>
-      <button class="moc" onclick="closeMo('launchModal')">â</button>
+      <button class="moc" onclick="closeMo('launchModal')">✕</button>
     </div>
     <div class="mob" id="launchModalBody" style="padding:20px 24px">
 
       <!-- STEPS -->
       <div class="lm-steps" id="lmSteps">
-        <div class="lm-step active" id="step1">1 Â· Keyword Harvest</div>
-        <div class="lm-step-arrow">âº</div>
-        <div class="lm-step" id="step2">2 Â· Product Targets</div>
-        <div class="lm-step-arrow">âº</div>
-        <div class="lm-step" id="step3">3 Â· Campaign Settings</div>
-        <div class="lm-step-arrow">âº</div>
-        <div class="lm-step" id="step4">4 Â· Review & Create</div>
+        <div class="lm-step active" id="step1">1 · Keyword Harvest</div>
+        <div class="lm-step-arrow">›</div>
+        <div class="lm-step" id="step2">2 · Product Targets</div>
+        <div class="lm-step-arrow">›</div>
+        <div class="lm-step" id="step3">3 · Campaign Settings</div>
+        <div class="lm-step-arrow">›</div>
+        <div class="lm-step" id="step4">4 · Review & Create</div>
       </div>
 
       <!-- STEP 1: KEYWORD HARVEST -->
       <div id="lmStep1">
         <div class="lm-section">
-          <div class="lm-sec-title">ð Keyword Harvest <span style="font-size:9px;background:var(--purplePale);color:var(--purple);padding:2px 8px;border-radius:4px;font-weight:700">Step 1 of 4</span></div>
+          <div class="lm-sec-title">🔑 Keyword Harvest <span style="font-size:9px;background:var(--purplePale);color:var(--purple);padding:2px 8px;border-radius:4px;font-weight:700">Step 1 of 4</span></div>
           <div class="lm-sec-sub">Select keywords to harvest into targeted campaigns. Keywords are sourced from Helium 10 + auto campaign data. Assign match type and starting bid for each.</div>
         </div>
 
         <div class="lm-harvest-box">
           <div class="lm-harvest-title">
-            <span>ð Helium 10 â Top Keywords for this ASIN</span>
+            <span>🚀 Helium 10 — Top Keywords for this ASIN</span>
             <span style="font-size:9px;color:var(--muted)" id="kwSelCount">0 selected</span>
           </div>
           <div class="lm-kw-list" id="lmKwList"></div>
@@ -1772,20 +1772,20 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
         </div>
 
         <div style="display:flex;justify-content:flex-end">
-          <button class="launch-build-btn" onclick="goStep(2)" style="padding:10px 24px">Next: Product Targets â</button>
+          <button class="launch-build-btn" onclick="goStep(2)" style="padding:10px 24px">Next: Product Targets →</button>
         </div>
       </div>
 
       <!-- STEP 2: PRODUCT TARGETS -->
       <div id="lmStep2" style="display:none">
         <div class="lm-section">
-          <div class="lm-sec-title">ð¯ Product Target Harvest <span style="font-size:9px;background:#fce7f3;color:#be185d;padding:2px 8px;border-radius:4px;font-weight:700">Step 2 of 4</span></div>
+          <div class="lm-sec-title">🎯 Product Target Harvest <span style="font-size:9px;background:#fce7f3;color:#be185d;padding:2px 8px;border-radius:4px;font-weight:700">Step 2 of 4</span></div>
           <div class="lm-sec-sub">Select competitor and complementary ASINs to target in product target campaigns. These will be placed in a dedicated SD/SP product targeting campaign.</div>
         </div>
 
         <div class="lm-harvest-box">
           <div class="lm-harvest-title">
-            <span>ðª Suggested Product Targets</span>
+            <span>🏪 Suggested Product Targets</span>
             <span style="font-size:9px;color:var(--muted)" id="ptSelCount">0 selected</span>
           </div>
           <div class="lm-pt-grid" id="lmPtGrid"></div>
@@ -1801,29 +1801,29 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
         </div>
 
         <div style="display:flex;justify-content:space-between">
-          <button class="bghost" onclick="goStep(1)">â Back</button>
-          <button class="launch-build-btn" onclick="goStep(3)" style="padding:10px 24px">Next: Campaign Settings â</button>
+          <button class="bghost" onclick="goStep(1)">← Back</button>
+          <button class="launch-build-btn" onclick="goStep(3)" style="padding:10px 24px">Next: Campaign Settings →</button>
         </div>
       </div>
 
       <!-- STEP 3: CAMPAIGN SETTINGS -->
       <div id="lmStep3" style="display:none">
         <div class="lm-section">
-          <div class="lm-sec-title">âï¸ Campaign Settings <span style="font-size:9px;background:var(--goldPale);color:var(--gold);padding:2px 8px;border-radius:4px;font-weight:700">Step 3 of 4</span></div>
-          <div class="lm-sec-sub">Configure budgets, bids and match strategy for your launch campaigns. Launch mode uses aggressive bidding to build rank history â you can adjust post-launch.</div>
+          <div class="lm-sec-title">⚙️ Campaign Settings <span style="font-size:9px;background:var(--goldPale);color:var(--gold);padding:2px 8px;border-radius:4px;font-weight:700">Step 3 of 4</span></div>
+          <div class="lm-sec-sub">Configure budgets, bids and match strategy for your launch campaigns. Launch mode uses aggressive bidding to build rank history — you can adjust post-launch.</div>
         </div>
 
         <div class="lm-settings-grid">
           <div class="lm-set-field">
-            <div class="lm-set-label">Daily Budget â Keyword Campaigns</div>
+            <div class="lm-set-label">Daily Budget — Keyword Campaigns</div>
             <input class="lm-set-input" id="lmKwBudget" value="$50" placeholder="$50">
           </div>
           <div class="lm-set-field">
-            <div class="lm-set-label">Daily Budget â Product Target Campaign</div>
+            <div class="lm-set-label">Daily Budget — Product Target Campaign</div>
             <input class="lm-set-input" id="lmPtBudget" value="$30" placeholder="$30">
           </div>
           <div class="lm-set-field">
-            <div class="lm-set-label">Daily Budget â Auto Campaign</div>
+            <div class="lm-set-label">Daily Budget — Auto Campaign</div>
             <input class="lm-set-input" id="lmAutoBudget" value="$25" placeholder="$25">
           </div>
           <div class="lm-set-field">
@@ -1841,8 +1841,8 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
           <div class="lm-set-field">
             <div class="lm-set-label">Bidding Strategy</div>
             <select class="lm-set-select" id="lmBidStrategy">
-              <option value="dynamic_up">Dynamic â Up Only (Launch)</option>
-              <option value="dynamic_both">Dynamic â Up & Down</option>
+              <option value="dynamic_up">Dynamic — Up Only (Launch)</option>
+              <option value="dynamic_both">Dynamic — Up & Down</option>
               <option value="fixed">Fixed Bids</option>
             </select>
           </div>
@@ -1853,32 +1853,32 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
         </div>
 
         <div style="background:var(--goldPale);border:1px solid rgba(217,119,6,.2);border-radius:8px;padding:10px 13px;margin-bottom:14px;font-size:10px;color:#92400e;line-height:1.6">
-          ð¡ <strong>Launch strategy:</strong> Dynamic Up Only bids let Amazon increase bids when conversion is likely. Recommended for new products to build sales velocity and rank.
+          💡 <strong>Launch strategy:</strong> Dynamic Up Only bids let Amazon increase bids when conversion is likely. Recommended for new products to build sales velocity and rank.
         </div>
 
         <div style="display:flex;justify-content:space-between">
-          <button class="bghost" onclick="goStep(2)">â Back</button>
-          <button class="launch-build-btn" onclick="goStep(4)" style="padding:10px 24px">Next: Review & Create â</button>
+          <button class="bghost" onclick="goStep(2)">← Back</button>
+          <button class="launch-build-btn" onclick="goStep(4)" style="padding:10px 24px">Next: Review & Create →</button>
         </div>
       </div>
 
       <!-- STEP 4: REVIEW & CREATE -->
       <div id="lmStep4" style="display:none">
         <div class="lm-section">
-          <div class="lm-sec-title">ð Review & Create <span style="font-size:9px;background:var(--greenPale);color:var(--green);padding:2px 8px;border-radius:4px;font-weight:700">Step 4 of 4</span></div>
+          <div class="lm-sec-title">📋 Review & Create <span style="font-size:9px;background:var(--greenPale);color:var(--green);padding:2px 8px;border-radius:4px;font-weight:700">Step 4 of 4</span></div>
           <div class="lm-sec-sub">Review the campaigns that will be created. Once confirmed, they will be queued for submission to Amazon Advertising.</div>
         </div>
 
         <div class="lm-camp-preview" id="lmCampPreview"></div>
 
         <div style="background:#fdf2f8;border:1.5px solid #f9a8d4;border-radius:9px;padding:12px 15px;margin-bottom:16px;font-size:10px;color:#9d174d;line-height:1.6">
-          ð <strong>After creating:</strong> Monitor daily for first 14 days. Harvest converting search terms into exact match campaigns weekly. Pause underperforming targets after 7 days.
+          🚀 <strong>After creating:</strong> Monitor daily for first 14 days. Harvest converting search terms into exact match campaigns weekly. Pause underperforming targets after 7 days.
         </div>
 
         <div style="display:flex;justify-content:space-between;align-items:center">
-          <button class="bghost" onclick="goStep(3)">â Back</button>
+          <button class="bghost" onclick="goStep(3)">← Back</button>
           <button class="launch-create-btn" onclick="createLaunchCampaigns()" id="lmCreateBtn">
-            <span>ð</span><span>Create All Launch Campaigns</span>
+            <span>🚀</span><span>Create All Launch Campaigns</span>
           </button>
         </div>
       </div>
@@ -1886,11 +1886,11 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
       <!-- SUCCESS -->
       <div id="lmSuccess" style="display:none">
         <div class="launch-success">
-          <div class="launch-success-ico">ð</div>
+          <div class="launch-success-ico">🎉</div>
           <div class="launch-success-title">Launch Campaigns Created!</div>
-          <div class="launch-success-sub">Your campaigns have been queued for submission to Amazon Advertising. They will go live within 1â2 hours once reviewed.</div>
+          <div class="launch-success-sub">Your campaigns have been queued for submission to Amazon Advertising. They will go live within 1–2 hours once reviewed.</div>
           <div class="launch-camp-created" id="lmCreatedList"></div>
-          <button class="launch-build-btn" onclick="closeMo('launchModal');toast('Campaigns live shortly!','ok')" style="width:100%;justify-content:center;padding:13px">Done â Back to Dashboard</button>
+          <button class="launch-build-btn" onclick="closeMo('launchModal');toast('Campaigns live shortly!','ok')" style="width:100%;justify-content:center;padding:13px">Done — Back to Dashboard</button>
         </div>
       </div>
 
@@ -1901,19 +1901,19 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
 <!-- SETTINGS MODAL -->
 <div class="mo" id="settingsModal">
   <div class="modal">
-    <div class="moh"><div class="mot">API Credentials & Settings</div><button class="moc" onclick="closeMo('settingsModal')">â</button></div>
+    <div class="moh"><div class="mot">API Credentials & Settings</div><button class="moc" onclick="closeMo('settingsModal')">✕</button></div>
     <div class="mob">
       <p style="font-size:10px;color:var(--muted);line-height:1.7;margin-bottom:15px;font-weight:500">Paste credentials once Amazon approves your developer application. App switches to live data automatically.</p>
       <div class="ssec" style="color:var(--purple)">Amazon Advertising API</div>
       <div style="margin-bottom:12px"><div class="fl">Client ID</div><input class="fi" style="margin-bottom:0" id="clientId" placeholder="amzn1.application-oa2-client.xxxx"></div>
-      <div style="margin-bottom:12px"><div class="fl">Client Secret</div><input class="fi" style="margin-bottom:0" type="password" id="clientSecret" placeholder="â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢â¢"></div>
+      <div style="margin-bottom:12px"><div class="fl">Client Secret</div><input class="fi" style="margin-bottom:0" type="password" id="clientSecret" placeholder="••••••••••••••••••••"></div>
       <div style="margin-bottom:4px"><div class="fl">Refresh Token</div><input class="fi" style="margin-bottom:0" type="password" id="refreshToken" placeholder="Atzr|xxxxxxxxxxxxxxxxxxxx"></div>
       <div style="font-size:9px;color:var(--muted);margin-bottom:4px">Stored only in your browser. Never shared externally.</div>
       <div class="sdiv"></div>
       <div class="ssec" style="color:var(--gold)">Helium 10</div>
       <div style="margin-bottom:12px"><div class="fl">Helium 10 API Key</div><input class="fi" style="margin-bottom:0" id="h10Key" placeholder="h10_xxxxxxxxxxxxxxxx"></div>
       <div style="margin-bottom:4px"><div class="fl">Helium 10 Email</div><input class="fi" style="margin-bottom:0" id="h10Email" placeholder="your@email.com"></div>
-      <div style="font-size:9px;color:var(--muted);margin-bottom:2px">Settings â API Keys in your Helium 10 account</div>
+      <div style="font-size:9px;color:var(--muted);margin-bottom:2px">Settings → API Keys in your Helium 10 account</div>
       <div style="font-size:9px;font-weight:600;margin-bottom:4px" id="h10StatusIco"></div>
       <div class="sdiv"></div>
       <div class="ssec" style="color:var(--purple)">Claude AI Integration</div>
@@ -1922,7 +1922,7 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
       <div style="margin-bottom:4px"><div class="fl" style="display:flex;align-items:center;gap:8px">Analysis Depth <label style="display:flex;align-items:center;gap:5px;cursor:pointer;font-weight:500;text-transform:none;letter-spacing:0;font-size:10px"><input type="checkbox" id="deepAnalysis" style="accent-color:var(--purple)"> Deep analysis (slower, more thorough)</label></div></div>
       <div class="sdiv"></div>
       <div class="ssec" style="color:var(--muted)">Optimization</div>
-      <div style="margin-bottom:12px"><div class="fl">Target ACOS (%)</div><input class="fi" style="margin-bottom:0" id="targetAcos" value="30" type="number" min="5" max="80"><div style="font-size:9px;color:var(--muted);margin-top:4px">AI optimizes toward this. Range: 20â35%</div></div>
+      <div style="margin-bottom:12px"><div class="fl">Target ACOS (%)</div><input class="fi" style="margin-bottom:0" id="targetAcos" value="30" type="number" min="5" max="80"><div style="font-size:9px;color:var(--muted);margin-top:4px">AI optimizes toward this. Range: 20–35%</div></div>
       <div><div class="fl">Alert Emails</div><input class="fi" style="margin-bottom:0" id="alertEmails" placeholder="ceo@purpleessences.com"></div>
     </div>
     <div class="mof">
@@ -1935,7 +1935,7 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
 <!-- MODIFY MODAL -->
 <div class="mo" id="modifyModal">
   <div class="modal" style="width:420px">
-    <div class="moh"><div class="mot">Modify AI Suggestion</div><button class="moc" onclick="closeMo('modifyModal')">â</button></div>
+    <div class="moh"><div class="mot">Modify AI Suggestion</div><button class="moc" onclick="closeMo('modifyModal')">✕</button></div>
     <div class="mob">
       <div style="font-size:11px;color:var(--muted);margin-bottom:14px;font-weight:500" id="modCtx"></div>
       <div class="fl" id="modLbl">New Value</div>
@@ -1957,32 +1957,32 @@ main{padding:22px 28px;max-width:1560px;margin:0 auto;}
 // ============================================================
 const BASE_STATS = {
   CA:[
-    {l:'Ad ACOS',v:'â',c:'sc-w',dv:'â',dd:'dn'},
-    {l:'TACOS',v:'â',c:'sc-w',dv:'â',dd:'dn'},
-    {l:'ROAS',v:'â',c:'sc-w',dv:'â',dd:'dn'},
-    {l:'Conv. Rate',v:'â',c:'sc-w',dv:'â',dd:'dn'},
-    {l:'Ad Spend',v:'$0',c:'sc-bl',dv:'â',dd:'dn'},
-    {l:'Ad Revenue',v:'$0',c:'sc-or',dv:'â',dd:'dn'},
-    {l:'Organic Sales',v:'$0',c:'sc-tl',dv:'â',dd:'dn'},
-    {l:'Total Clicks',v:'0',c:'sc-p',dv:'â',dd:'dn'},
-    {l:'Total Orders',v:'0',c:'sc-pk',dv:'â',dd:'dn'},
-    {l:'Organic Orders',v:'0',c:'sc-tl',dv:'â',dd:'dn'},
-    {l:'Avg CPC',v:'$0',c:'sc-bl',dv:'â',dd:'dn'},
-    {l:'CTR',v:'â',c:'sc-w',dv:'â',dd:'dn'},
+    {l:'Ad ACOS',v:'—',c:'sc-w',dv:'—',dd:'dn'},
+    {l:'TACOS',v:'—',c:'sc-w',dv:'—',dd:'dn'},
+    {l:'ROAS',v:'—',c:'sc-w',dv:'—',dd:'dn'},
+    {l:'Conv. Rate',v:'—',c:'sc-w',dv:'—',dd:'dn'},
+    {l:'Ad Spend',v:'$0',c:'sc-bl',dv:'—',dd:'dn'},
+    {l:'Ad Revenue',v:'$0',c:'sc-or',dv:'—',dd:'dn'},
+    {l:'Organic Sales',v:'$0',c:'sc-tl',dv:'—',dd:'dn'},
+    {l:'Total Clicks',v:'0',c:'sc-p',dv:'—',dd:'dn'},
+    {l:'Total Orders',v:'0',c:'sc-pk',dv:'—',dd:'dn'},
+    {l:'Organic Orders',v:'0',c:'sc-tl',dv:'—',dd:'dn'},
+    {l:'Avg CPC',v:'$0',c:'sc-bl',dv:'—',dd:'dn'},
+    {l:'CTR',v:'—',c:'sc-w',dv:'—',dd:'dn'},
   ],
   MX:[
-    {l:'Ad ACOS',v:'â',c:'sc-w',dv:'â',dd:'dn'},
-    {l:'TACOS',v:'â',c:'sc-w',dv:'â',dd:'dn'},
-    {l:'ROAS',v:'â',c:'sc-w',dv:'â',dd:'dn'},
-    {l:'Conv. Rate',v:'â',c:'sc-w',dv:'â',dd:'dn'},
-    {l:'Ad Spend',v:'$0',c:'sc-bl',dv:'â',dd:'dn'},
-    {l:'Ad Revenue',v:'$0',c:'sc-or',dv:'â',dd:'dn'},
-    {l:'Organic Sales',v:'$0',c:'sc-tl',dv:'â',dd:'dn'},
-    {l:'Total Clicks',v:'0',c:'sc-p',dv:'â',dd:'dn'},
-    {l:'Total Orders',v:'0',c:'sc-pk',dv:'â',dd:'dn'},
-    {l:'Organic Orders',v:'0',c:'sc-tl',dv:'â',dd:'dn'},
-    {l:'Avg CPC',v:'$0',c:'sc-bl',dv:'â',dd:'dn'},
-    {l:'CTR',v:'â',c:'sc-w',dv:'â',dd:'dn'},
+    {l:'Ad ACOS',v:'—',c:'sc-w',dv:'—',dd:'dn'},
+    {l:'TACOS',v:'—',c:'sc-w',dv:'—',dd:'dn'},
+    {l:'ROAS',v:'—',c:'sc-w',dv:'—',dd:'dn'},
+    {l:'Conv. Rate',v:'—',c:'sc-w',dv:'—',dd:'dn'},
+    {l:'Ad Spend',v:'$0',c:'sc-bl',dv:'—',dd:'dn'},
+    {l:'Ad Revenue',v:'$0',c:'sc-or',dv:'—',dd:'dn'},
+    {l:'Organic Sales',v:'$0',c:'sc-tl',dv:'—',dd:'dn'},
+    {l:'Total Clicks',v:'0',c:'sc-p',dv:'—',dd:'dn'},
+    {l:'Total Orders',v:'0',c:'sc-pk',dv:'—',dd:'dn'},
+    {l:'Organic Orders',v:'0',c:'sc-tl',dv:'—',dd:'dn'},
+    {l:'Avg CPC',v:'$0',c:'sc-bl',dv:'—',dd:'dn'},
+    {l:'CTR',v:'—',c:'sc-w',dv:'—',dd:'dn'},
   ]
 };
 
@@ -2013,13 +2013,13 @@ const PRODUCT_TARGETS_BY_MKT={
 };
 
 const TASKS=[
-  {freq:'Daily',icon:'ti-d',items:[{text:'Morning order report â ACOS, TACOS, ROAS, Spend & Sales',markets:['CA','MX'],due:true},{text:'Campaign count report (update in evening)',markets:['CA','MX'],due:true},{text:'Enable/check campaign count',markets:['CA','MX'],due:true}]},
+  {freq:'Daily',icon:'ti-d',items:[{text:'Morning order report — ACOS, TACOS, ROAS, Spend & Sales',markets:['CA','MX'],due:true},{text:'Campaign count report (update in evening)',markets:['CA','MX'],due:true},{text:'Enable/check campaign count',markets:['CA','MX'],due:true}]},
   {freq:'Every 2 Days',icon:'ti-2',items:[{text:'Optimization check + budget utilization review',markets:['CA','MX'],due:true}]},
   {freq:'Every 3 Days',icon:'ti-3',items:[{text:'Spend $35+ above campaign list review',markets:['CA','MX'],due:false}]},
   {freq:'Every 5 Days',icon:'ti-5',items:[{text:'Each product profit margin check',markets:['CA','MX'],due:false},{text:'Product organic + ads order details',markets:['CA','MX'],due:false},{text:'Spend $15+ above campaign list',markets:['CA','MX'],due:false}]},
-  {freq:'Every 6 Days',icon:'ti-6',items:[{text:'Scale Report â best performing campaigns',markets:['CA','MX'],due:false},{text:'Scale Report â worst performing campaigns',markets:['CA','MX'],due:false}]},
-  {freq:'Every 7 Days',icon:'ti-7',items:[{text:'All campaign optimization â all targets',markets:['CA','MX'],due:false},{text:'Budget utilization full review',markets:['CA','MX'],due:false},{text:'Search term sales report (3+ orders)',markets:['CA','MX'],due:false},{text:'Negative search term report (Tuesday)',markets:['CA','MX'],due:false},{text:'TACOS list review',markets:['CA','MX'],due:false}]},
-  {freq:'Every 10 Days',icon:'ti-10',items:[{text:'No/under-100 impressions + $3 spend below target list',markets:['CA','MX'],due:false},{text:'Last year same period best performance â with Target',markets:['CA','MX'],due:false}]},
+  {freq:'Every 6 Days',icon:'ti-6',items:[{text:'Scale Report — best performing campaigns',markets:['CA','MX'],due:false},{text:'Scale Report — worst performing campaigns',markets:['CA','MX'],due:false}]},
+  {freq:'Every 7 Days',icon:'ti-7',items:[{text:'All campaign optimization — all targets',markets:['CA','MX'],due:false},{text:'Budget utilization full review',markets:['CA','MX'],due:false},{text:'Search term sales report (3+ orders)',markets:['CA','MX'],due:false},{text:'Negative search term report (Tuesday)',markets:['CA','MX'],due:false},{text:'TACOS list review',markets:['CA','MX'],due:false}]},
+  {freq:'Every 10 Days',icon:'ti-10',items:[{text:'No/under-100 impressions + $3 spend below target list',markets:['CA','MX'],due:false},{text:'Last year same period best performance — with Target',markets:['CA','MX'],due:false}]},
   {freq:'Every 14 Days',icon:'ti-14',items:[{text:'ACOS, TACOS and Profit Margin full list',markets:['CA','MX'],due:false}]},
   {freq:'Every 15 Days',icon:'ti-15',items:[{text:'Campaign count per ASIN',markets:['CA','MX'],due:false},{text:'Return Rate data only analysis',markets:['CA','MX'],due:false}]},
 ];
@@ -2074,7 +2074,7 @@ function initFirebase() {
       const dot2 = document.getElementById('fbStatusDot2');
       const lbl2 = document.getElementById('fbStatusLbl2');
       if (dot2) dot2.style.background = fbConnected ? 'var(--green)' : 'var(--red)';
-      if (lbl2) lbl2.textContent = fbConnected ? 'Connected â syncing' : 'Offline â local only';
+      if (lbl2) lbl2.textContent = fbConnected ? 'Connected — syncing' : 'Offline — local only';
     });
     // Initial pull from cloud
     fbPull();
@@ -2146,7 +2146,7 @@ function fbForceSync() {
   toast('Data synced to cloud', 'ok');
 }
 
-// Master data schema â all user data lives here
+// Master data schema — all user data lives here
 function getDefaultStore() {
   return {
     _schema: PE_SCHEMA_VERSION,
@@ -2180,7 +2180,7 @@ function getDefaultStore() {
     // Tracked ASINs
     asins: null,  // null = use TRACKED_ASINS_DEFAULT
 
-    // Day parting schedules (market-campaign-key â 7Ã24 grid)
+    // Day parting schedules (market-campaign-key → 7×24 grid)
     dayParting: {},
 
     // AI action states
@@ -2337,7 +2337,7 @@ function peStore_apply(store) {
       try { localStorage.setItem('pe_versionHistory', JSON.stringify(store.versionHistory)); } catch(e) {}
     }
 
-    // Settings â apply to DOM when admin page renders
+    // Settings — apply to DOM when admin page renders
     if (store.settings) {
       window._peLoadedSettings = store.settings;
     }
@@ -2477,7 +2477,7 @@ function peStore_importJSON(file) {
       }
       peStore_save();
       logChange('Data imported from file: ' + file.name);
-      toast('Data imported successfully â backup created', 'ok');
+      toast('Data imported successfully — backup created', 'ok');
       // Re-render everything
       renderAdminPage();
     } catch(err) {
@@ -2514,7 +2514,7 @@ function doLogin(){
   document.getElementById('uav').textContent=r.i;
   document.getElementById('uav').className='av '+r.av;
   document.getElementById('ulbl').textContent=r.l;
-  // Show/hide nav buttons based on role â pgMap must match .nb button order in HTML
+  // Show/hide nav buttons based on role — pgMap must match .nb button order in HTML
   const allNbs=document.querySelectorAll('.nb');
   const pgMap=['ads','daypart','schedule','reports','admin'];
   allNbs.forEach((nb,i)=>{ nb.style.display=r.pgs.includes(pgMap[i])?'':'none'; });
@@ -2640,11 +2640,11 @@ function renderAll(){
   const asin=document.getElementById('asinField').value||'';
   const nm={CA:'Canada',MX:'Mexico'};
   const tc=MKTS[market].campaigns.filter(c=>c.status!=='paused').length;
-  document.getElementById('campSub').textContent=`ASIN ${asin} Â· ${nm[market]} Â· ${tc} active campaigns`;
+  document.getElementById('campSub').textContent=`ASIN ${asin} · ${nm[market]} · ${tc} active campaigns`;
   document.getElementById('aiSub').textContent=`${MKTS[market].recs.filter(r=>!approved.has(r.id)&&!rejected.has(r.id)).length} pending`;
 }
 
-// Stat visibility state â keyed by label
+// Stat visibility state — keyed by label
 const visibleStats={'Ad ACOS':true,'TACOS':true,'ROAS':true,'Conv. Rate':true,'Ad Spend':true,'Ad Revenue':true,'Organic Sales':true,'Total Clicks':true,'Total Orders':true,'Organic Orders':false,'Avg CPC':false,'CTR':false};
 function toggleStat(label){
   visibleStats[label]=!visibleStats[label];
@@ -2674,7 +2674,7 @@ function renderCamps(camps){
   else if(campFilter==='paused') list=list.filter(c=>c.status==='paused');
   else if(campFilter==='budget') list=list.filter(c=>c.status==='budget');
   else if(campFilter==='SP'||campFilter==='SB'||campFilter==='SD') list=list.filter(c=>c.type===campFilter);
-  if(!list.length){document.getElementById('campList').innerHTML=`<div class="empty"><div class="empty-i">ð</div><div class="empty-t">No campaigns</div><div class="empty-s">Try a different filter or enable "Show paused campaigns".</div></div>`;return;}
+  if(!list.length){document.getElementById('campList').innerHTML=`<div class="empty"><div class="empty-i">🔍</div><div class="empty-t">No campaigns</div><div class="empty-s">Try a different filter or enable "Show paused campaigns".</div></div>`;return;}
 
   // Date range multipliers for campaign metrics
   const campMuls={today:{acos:.96,spend:.14,conv:1.02},yesterday:{acos:1.04,spend:.13,conv:.98},'7d':{acos:1,spend:1,conv:1},'14d':{acos:1.02,spend:2.1,conv:1.01},'30d':{acos:.98,spend:4.4,conv:1.03},mtd:{acos:1.01,spend:1.6,conv:1.0},lm:{acos:1.05,spend:4.8,conv:.96},qtd:{acos:.99,spend:6.2,conv:1.02},custom:{acos:1,spend:1,conv:1}};
@@ -2696,14 +2696,14 @@ function renderCamps(camps){
     const sc=c.status==='active'?'on':c.status==='budget'?'bud':'off';
     const sl=c.status==='active'?'Active':c.status==='budget'?'Budget Exhausted':'Paused';
     const rc=MKTS[market].recs.filter(r=>r.cid===c.id).length;
-    const yoyBox=isPaused&&c.yoy?`<div class="yoy-box"><div class="yoy-box-title">ð YoY Suggestion â This time last year</div><div class="yoy-box-text">${c.yoyNote||''}</div><div class="yoy-btns"><button class="yoy-enable" onclick="enableCamp('${c.id}')">â¶ Re-enable Campaign</button><button class="yoy-later">Later</button></div></div>`:'';
+    const yoyBox=isPaused&&c.yoy?`<div class="yoy-box"><div class="yoy-box-title">📅 YoY Suggestion — This time last year</div><div class="yoy-box-text">${c.yoyNote||''}</div><div class="yoy-btns"><button class="yoy-enable" onclick="enableCamp('${c.id}')">▶ Re-enable Campaign</button><button class="yoy-later">Later</button></div></div>`:'';
     return `<div class="cc ${c.hasRec?'has-rec':''} ${c.highAcos?'hi-acos':''} ${isPaused?'paused-card':''} ${isPaused&&c.yoy?'yoy-good':''}" onclick="selCard(this)">
       <div class="cc-top">
         <div class="cc-name">${c.name}</div>
         <div class="cc-badges">
           <div class="ctype ${isPaused?'t-paused':'t-'+c.type.toLowerCase()}">${isPaused?'PAUSED':c.type}</div>
-          ${isPaused&&c.yoy?'<div class="yoy-badge">ð YoY Pick</div>':''}
-          ${(c.isNew||newLaunch)?'<div class="new-launch">ð New Launch</div>':''}
+          ${isPaused&&c.yoy?'<div class="yoy-badge">📅 YoY Pick</div>':''}
+          ${(c.isNew||newLaunch)?'<div class="new-launch">🚀 New Launch</div>':''}
         </div>
       </div>
       ${!isPaused?`<div class="cc-mets">
@@ -2720,10 +2720,10 @@ function renderCamps(camps){
         ${visibleCols.revenue?`<div><div class="cml">Ad Revenue</div><div class="cmv">$${(c.revenue||0).toLocaleString()}</div></div>`:''}
         ${visibleCols.orgSales?`<div><div class="cml">Org. Sales</div><div class="cmv">$${(c.orgSales||0).toLocaleString()}</div></div>`:''}
       </div>
-      <div class="cc-bar-w"><div class="cc-bar ${bc}" style="width:${bw}%"></div></div>`:'<div style="font-size:10px;color:var(--muted);margin:6px 0 10px;font-weight:500">Campaign is paused â no active data</div>'}
+      <div class="cc-bar-w"><div class="cc-bar ${bc}" style="width:${bw}%"></div></div>`:'<div style="font-size:10px;color:var(--muted);margin:6px 0 10px;font-weight:500">Campaign is paused — no active data</div>'}
       <div class="cc-bot">
         <div class="cstat"><div class="sdot ${sc}"></div><span style="color:var(--muted);font-size:9px;font-weight:500">${sl}</span></div>
-        ${c.highAcos?'<div class="rb rb-red">ð¨ ACOS >100%</div>':c.hasRec?`<div class="rb rb-gold">â¡ ${rc} action${rc>1?'s':''}</div>`:isPaused&&c.yoy?'<div class="rb rb-blue">ð YoY candidate</div>':''}
+        ${c.highAcos?'<div class="rb rb-red">🚨 ACOS >100%</div>':c.hasRec?`<div class="rb rb-gold">⚡ ${rc} action${rc>1?'s':''}</div>`:isPaused&&c.yoy?'<div class="rb rb-blue">📅 YoY candidate</div>':''}
       </div>
       ${yoyBox}
     </div>`;
@@ -2742,15 +2742,15 @@ function toggleCol(col){
 function enableCamp(id){toast('Campaign re-enabled and queued to go live','ok');}
 
 function renderAI(recs){
-  if(!recs.length){document.getElementById('aiList').innerHTML=`<div class="empty"><div class="empty-i">â¨</div><div class="empty-t">All good!</div></div>`;return;}
+  if(!recs.length){document.getElementById('aiList').innerHTML=`<div class="empty"><div class="empty-i">✨</div><div class="empty-t">All good!</div></div>`;return;}
   // Check for preview mode toggle
   const previewMode = document.getElementById('aiPreviewToggle')?.checked || false;
   document.getElementById('aiList').innerHTML=recs.map((r,i)=>{
     const d=`animation-delay:${i*.05}s`;
-    if(approved.has(r.id))return`<div class="ac-card" style="${d}"><div class="ac-camp">${r.camp}</div><div class="ac-appr">â Approved â queued</div></div>`;
+    if(approved.has(r.id))return`<div class="ac-card" style="${d}"><div class="ac-camp">${r.camp}</div><div class="ac-appr">✓ Approved — queued</div></div>`;
     if(rejected.has(r.id))return`<div class="ac-card" style="${d};opacity:.3"><div class="ac-camp">${r.camp}</div><div class="ac-rej">${r.act.replace(/<[^>]*>/g,'')}</div></div>`;
     const mv=modified[r.id];const fv=mv||r.to;
-    const tm={increase:'atb-i â Bid Increase',decrease:'atb-d â Bid Decrease',pause:'atb-pa â¸ Pause',keyword:'atb-kw + Keywords',negative:'atb-ng â Negatives',budget:'atb-bg ð° Budget',placement:'atb-pl ð Placement'};
+    const tm={increase:'atb-i ↑ Bid Increase',decrease:'atb-d ↓ Bid Decrease',pause:'atb-pa ⏸ Pause',keyword:'atb-kw + Keywords',negative:'atb-ng ✗ Negatives',budget:'atb-bg 💰 Budget',placement:'atb-pl 📍 Placement'};
     const [tc,tl]=(tm[r.type]||'atb-kw '+r.type).split(' ').reduce((a,v,i)=>i===0?[v,a[1]]:[a[0],a[1]+' '+v],['','']);
     return`<div class="ac-card" style="${d}">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
@@ -2758,14 +2758,14 @@ function renderAI(recs){
         <div class="ma-pill ${r.ip}" style="font-size:8px;padding:2px 6px">${r.imp}</div>
       </div>
       <div class="ac-camp">${r.camp}</div>
-      ${r.adGroup?`<div style="font-size:10px;color:var(--muted);margin:3px 0">ð Ad Group: <strong>${r.adGroup}</strong></div>`:``}
-      ${r.target?`<div style="font-size:10px;color:var(--muted);margin:3px 0">ð¯ Target/Keyword: <strong>${r.target}</strong></div>`:``}
+      ${r.adGroup?`<div style="font-size:10px;color:var(--muted);margin:3px 0">📁 Ad Group: <strong>${r.adGroup}</strong></div>`:``}
+      ${r.target?`<div style="font-size:10px;color:var(--muted);margin:3px 0">🎯 Target/Keyword: <strong>${r.target}</strong></div>`:``}
       <div class="ac-act ${r.type}">${r.act}${mv?` <span style="color:var(--blue);font-size:9px">(modified: ${mv})</span>`:''}</div>
       <div class="ac-rat">${r.rat}</div>
-      <div class="ac-prev-row"><span class="from-v">${r.from}</span><span style="color:var(--dim)">â</span><span class="to-v">${fv}</span><span class="dpill ${r.ip}">${r.imp}</span></div>
+      <div class="ac-prev-row"><span class="from-v">${r.from}</span><span style="color:var(--dim)">→</span><span class="to-v">${fv}</span><span class="dpill ${r.ip}">${r.imp}</span></div>
       ${r.kwList&&r.kwList.length?`<div class="kw-detail-section">
         <button class="kw-detail-toggle" onclick="this.parentElement.classList.toggle('open')">
-          <span class="kw-detail-arrow">â¶</span> View ${r.kwList.length} keyword${r.kwList.length>1?'s':''}/target${r.kwList.length>1?'s':''}
+          <span class="kw-detail-arrow">▶</span> View ${r.kwList.length} keyword${r.kwList.length>1?'s':''}/target${r.kwList.length>1?'s':''}
         </button>
         <div class="kw-detail-list">
           <div class="kw-detail-header">
@@ -2782,9 +2782,9 @@ function renderAI(recs){
       </div>`:''}
       ${previewMode?`<div style="background:var(--surface2);padding:8px;border-radius:6px;margin:8px 0;font-size:10px;color:var(--muted)"><strong>Preview:</strong> This action will be applied when you click Approve.</div>`:''}
       <div class="acbtns">
-        <button class="bapprove" onclick="appRec('${r.id}')">â Approve</button>
-        <button class="bmodify" onclick="openModify('${r.id}','${r.unit}','${r.to}','${r.camp}')">â Modify</button>
-        <button class="breject" onclick="rejRec('${r.id}')">â</button>
+        <button class="bapprove" onclick="appRec('${r.id}')">✓ Approve</button>
+        <button class="bmodify" onclick="openModify('${r.id}','${r.unit}','${r.to}','${r.camp}')">✏ Modify</button>
+        <button class="breject" onclick="rejRec('${r.id}')">✕</button>
       </div>
     </div>`;
   }).join('');
@@ -2794,8 +2794,8 @@ function rejRec(id){rejected.add(id);renderAI(MKTS[market].recs);toast('Dismisse
 function approveAll(){MKTS[market].recs.forEach(r=>approved.add(r.id));renderAI(MKTS[market].recs);toast(`All ${market} actions approved!`,'ok');}
 
 function renderPlacement(placements){
-  const mktLabel={CA:'ð¨ð¦ CA',MX:'ð²ð½ MX'}[market]||market;
-  document.getElementById('placSub').textContent=`${mktLabel} Â· ${placements.length} placements Â· Performance by position`;
+  const mktLabel={CA:'🇨🇦 CA',MX:'🇲🇽 MX'}[market]||market;
+  document.getElementById('placSub').textContent=`${mktLabel} · ${placements.length} placements · Performance by position`;
 
   // Parse numeric helpers
   const parseNum=s=>{if(typeof s==='number')return s;const n=String(s).replace(/[^0-9.]/g,'');const m=String(s).toUpperCase();if(m.includes('K'))return parseFloat(n)*1000;return parseFloat(n)||0;};
@@ -2804,9 +2804,9 @@ function renderPlacement(placements){
   // Compute totals
   let totImp=0,totClk=0,totOrd=0,totSales=0,totSpend=0;
   placements.forEach(p=>{totImp+=parseNum(p.impressions);totClk+=parseNum(p.clicks);totOrd+=parseNum(p.orders);totSales+=parseNum(p.sales);totSpend+=parseNum(p.spend);});
-  const totAcos=totSales>0?((totSpend/totSales)*100).toFixed(1):'â';
-  const totCtr=totImp>0?((totClk/totImp)*100).toFixed(2):'â';
-  const totCvr=totClk>0?((totOrd/totClk)*100).toFixed(1):'â';
+  const totAcos=totSales>0?((totSpend/totSales)*100).toFixed(1):'—';
+  const totCtr=totImp>0?((totClk/totImp)*100).toFixed(2):'—';
+  const totCvr=totClk>0?((totOrd/totClk)*100).toFixed(1):'—';
 
   // Find best/worst ACOS
   const acosVals=placements.map(p=>parseFloat(String(p.acos)));
@@ -2817,16 +2817,16 @@ function renderPlacement(placements){
   const bestP=placements[bestIdx];
   const worstP=placements[worstIdx];
   document.getElementById('placSummaryBadge').innerHTML=
-    `<span style="font-size:9px;padding:3px 8px;border-radius:5px;background:var(--greenPale);color:var(--green);font-weight:700">ð Best: ${bestP?.name?.replace(/ \(.*\)/,'')||'â'} ${bestP?.acos||''}</span>`+
-    `<span style="font-size:9px;padding:3px 8px;border-radius:5px;background:var(--redPale);color:var(--red);font-weight:700">â  Worst: ${worstP?.name?.replace(/ \(.*\)/,'')||'â'} ${worstP?.acos||''}</span>`;
+    `<span style="font-size:9px;padding:3px 8px;border-radius:5px;background:var(--greenPale);color:var(--green);font-weight:700">🏆 Best: ${bestP?.name?.replace(/ \(.*\)/,'')||'—'} ${bestP?.acos||''}</span>`+
+    `<span style="font-size:9px;padding:3px 8px;border-radius:5px;background:var(--redPale);color:var(--red);font-weight:700">⚠ Worst: ${worstP?.name?.replace(/ \(.*\)/,'')||'—'} ${worstP?.acos||''}</span>`;
 
   // Build table
   const acosColor=v=>{const n=parseFloat(v);return n<=25?'plac-acos-good':n<=35?'plac-acos-warn':'plac-acos-bad';};
   const acosBar=(v,max)=>{const n=parseFloat(v);const w=Math.min(100,Math.round((n/(max||60))*100));const c=n<=25?'var(--green)':n<=35?'var(--gold)':'var(--red)';return`<span class="plac-acos-bar"><span class="pab-fill" style="width:${w}px;background:${c}"></span><span class="${acosColor(v)}" style="font-weight:800">${v}</span></span>`;};
-  const modPill=(from,to)=>{const f=parseFloat(String(from).replace(/[^0-9.-]/g,''));const t=parseFloat(String(to).replace(/[^0-9.-]/g,''));if(t>f)return`<span class="plac-mod-pill plac-mod-up">â ${to}</span>`;if(t<f)return`<span class="plac-mod-pill plac-mod-down">â ${to}</span>`;return`<span class="plac-mod-pill plac-mod-same">â ${to}</span>`;};
+  const modPill=(from,to)=>{const f=parseFloat(String(from).replace(/[^0-9.-]/g,''));const t=parseFloat(String(to).replace(/[^0-9.-]/g,''));if(t>f)return`<span class="plac-mod-pill plac-mod-up">↑ ${to}</span>`;if(t<f)return`<span class="plac-mod-pill plac-mod-down">↓ ${to}</span>`;return`<span class="plac-mod-pill plac-mod-same">→ ${to}</span>`;};
   const maxAcos=Math.max(...acosVals,60);
   // Spend share
-  const spendShare=v=>totSpend>0?((parseNum(v)/totSpend)*100).toFixed(0)+'%':'â';
+  const spendShare=v=>totSpend>0?((parseNum(v)/totSpend)*100).toFixed(0)+'%':'—';
 
   let tblHtml=`<table class="plac-tbl">
     <thead><tr>
@@ -2847,7 +2847,7 @@ function renderPlacement(placements){
     const rowClass=i===bestIdx?'plac-best':i===worstIdx?'plac-worst':'';
     const spendStr=typeof p.spend==='string'?p.spend.replace('$',''):p.spend;
     tblHtml+=`<tr class="${rowClass}">
-      <td>ð ${p.name}</td>
+      <td>📍 ${p.name}</td>
       <td>${p.impressions}</td>
       <td>${p.clicks}</td>
       <td>${p.ctr}</td>
@@ -2883,26 +2883,26 @@ function renderPlacement(placements){
     const done=placApproved.has(`${market}-${i}`);
     return`<div class="plac-row">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px">
-        <span style="font-weight:700;font-size:12px">ð ${p.name}</span>
+        <span style="font-weight:700;font-size:12px">📍 ${p.name}</span>
         ${modPill(p.from,p.to)}
       </div>
-      <div class="plac-rec">ð¡ ${p.rec}</div>
-      ${done?`<div class="ac-appr">â Approved: ${p.from} â ${p.to}</div>`:`<div class="plac-btns">
-        <button class="bplac" onclick="appPlac(${i},'${p.from}','${p.to}')">â Apply ${p.from} â ${p.to}</button>
+      <div class="plac-rec">💡 ${p.rec}</div>
+      ${done?`<div class="ac-appr">✓ Approved: ${p.from} → ${p.to}</div>`:`<div class="plac-btns">
+        <button class="bplac" onclick="appPlac(${i},'${p.from}','${p.to}')">✓ Apply ${p.from} → ${p.to}</button>
         <button class="bplac-skip" onclick="toast('Skipped placement change','in')">Skip</button>
       </div>`}
     </div>`;
   }).join('');
 }
-function appPlac(i,from,to){placApproved.add(`${market}-${i}`);renderPlacement(MKTS[market].placements);toast(`Placement modifier updated ${from}â${to}`,'ok');peStore_scheduleAutoSave();}
+function appPlac(i,from,to){placApproved.add(`${market}-${i}`);renderPlacement(MKTS[market].placements);toast(`Placement modifier updated ${from}→${to}`,'ok');peStore_scheduleAutoSave();}
 
 function renderKW(kws){
   document.getElementById('kwList').innerHTML=kws.map(k=>`
     <div class="kwi">
       <div class="kwt">${k.kw}</div>
-      <div style="font-size:11px;color:var(--muted);margin:4px 0">ð·ï¸ ${k.campaign||'â'}</div>
-      <div style="font-size:10px;color:var(--dim);margin:2px 0">ð ${k.adgroup||'â'} Â· ${k.match||'â'} match</div>
-      <div style="font-size:9px;color:var(--dim)">ð Added: ${k.added||'â'}</div>
+      <div style="font-size:11px;color:var(--muted);margin:4px 0">🏷️ ${k.campaign||'—'}</div>
+      <div style="font-size:10px;color:var(--dim);margin:2px 0">📁 ${k.adgroup||'—'} · ${k.match||'—'} match</div>
+      <div style="font-size:9px;color:var(--dim)">📅 Added: ${k.added||'—'}</div>
       <div class="kwr" style="margin-top:6px"><div class="kwvol">${k.vol}</div><div class="kwsc ${k.score==='high'?'ks-h':'ks-m'}">${k.score.toUpperCase()}</div><button class="kwadd" onclick="addKW('${k.kw}')">+ Add</button></div>
     </div>`).join('');
 }
@@ -2927,13 +2927,13 @@ function runAudit(){
   setTimeout(()=>{
     clearInterval(iv);lo.classList.remove('show');
     document.getElementById('asinInfo').style.display='grid';
-    document.getElementById('asinIdLbl').textContent=`ASIN: ${asin} Â· SKU: PE-${asin.slice(-4)}`;
+    document.getElementById('asinIdLbl').textContent=`ASIN: ${asin} · SKU: PE-${asin.slice(-4)}`;
     const nl=document.getElementById('newLaunchMode').checked;
-    const tags=`<div class="atag atag-cat">Essential Oils</div><div class="atag atag-rank">BSR #182</div><div class="atag atag-rating">â­ 4.7 (1,842)</div>${nl?'<div class="atag atag-new">ð New Launch</div>':''}`;
+    const tags=`<div class="atag atag-cat">Essential Oils</div><div class="atag atag-rank">BSR #182</div><div class="atag atag-rating">⭐ 4.7 (1,842)</div>${nl?'<div class="atag atag-new">🚀 New Launch</div>':''}`;
     document.getElementById('asinTags').innerHTML=tags;
-    if(nl){document.getElementById('invTotal').textContent='0';document.getElementById('invDays').textContent='Pre-launch';document.getElementById('invSales').textContent='â';document.getElementById('invStatus').textContent='ð¦';}
+    if(nl){document.getElementById('invTotal').textContent='0';document.getElementById('invDays').textContent='Pre-launch';document.getElementById('invSales').textContent='—';document.getElementById('invStatus').textContent='📦';}
     renderAll();
-    toast(`Audit complete â ${MKTS[market].recs.length} AI actions generated`,'ok');
+    toast(`Audit complete — ${MKTS[market].recs.length} AI actions generated`,'ok');
   },3500);
 }
 function loadAsin(a){document.getElementById('asinField').value=a;runAudit();}
@@ -2958,16 +2958,16 @@ function setPreset(p,btn){
   document.querySelectorAll('#pg-ads .date-bar .dp').forEach(b=>b.classList.remove('act'));
   btn.classList.add('act');
   document.getElementById('custInputs').style.display=p==='custom'?'flex':'none';
-  if(p!=='custom'){const r=computeRange(p);const days=Math.round((r.to-r.from)/864e5)+1;document.getElementById('dDispVal').textContent=`${fmtShort(r.from)}â${fmtShort(r.to)}, 2026`;renderStats();renderCamps(MKTS[market].campaigns);renderAI(MKTS[market].recs);renderPlacement(MKTS[market].placements);toast(`${days} day${days>1?'s':''}: ${fmtShort(r.from)}â${fmtShort(r.to)}`,'in');}
+  if(p!=='custom'){const r=computeRange(p);const days=Math.round((r.to-r.from)/864e5)+1;document.getElementById('dDispVal').textContent=`${fmtShort(r.from)}–${fmtShort(r.to)}, 2026`;renderStats();renderCamps(MKTS[market].campaigns);renderAI(MKTS[market].recs);renderPlacement(MKTS[market].placements);toast(`${days} day${days>1?'s':''}: ${fmtShort(r.from)}–${fmtShort(r.to)}`,'in');}
 }
 function applyCustom(){
   const f=document.getElementById('dFrom').value,t=document.getElementById('dTo').value;
   if(!f||!t||f>t){toast('Check date range','er');return;}
   curPreset='custom';
-  document.getElementById('dDispVal').textContent=f.slice(5)+' â '+t.slice(5);renderStats();renderCamps(MKTS[market].campaigns);renderAI(MKTS[market].recs);renderPlacement(MKTS[market].placements);toast('Custom range applied','in');
+  document.getElementById('dDispVal').textContent=f.slice(5)+' → '+t.slice(5);renderStats();renderCamps(MKTS[market].campaigns);renderAI(MKTS[market].recs);renderPlacement(MKTS[market].placements);toast('Custom range applied','in');
 }function toggleCmp(cb){
   const lbl=document.getElementById('cmpLbl');
-  if(cb.checked){const r=computeRange(curPreset);const pr={from:addDays(r.from,-14),to:addDays(r.from,-1)};lbl.style.display='';lbl.textContent=`vs ${fmtShort(pr.from)}â${fmtShort(pr.to)}`;toast('Comparing to prior period','in');}
+  if(cb.checked){const r=computeRange(curPreset);const pr={from:addDays(r.from,-14),to:addDays(r.from,-1)};lbl.style.display='';lbl.textContent=`vs ${fmtShort(pr.from)}–${fmtShort(pr.to)}`;toast('Comparing to prior period','in');}
   else lbl.style.display='none';
   renderStats();
 }
@@ -2990,13 +2990,13 @@ function renderSchedule(){
   }).join('');
   document.getElementById('taskGrid').innerHTML=TASKS.map(sec=>`
     <div class="task-sec">
-      <div class="ts-h"><div class="ts-ico ${sec.icon}">ð</div><div><div class="ts-title">${sec.freq}</div><div class="ts-freq">${sec.freq}</div></div></div>
+      <div class="ts-h"><div class="ts-ico ${sec.icon}">📋</div><div><div class="ts-title">${sec.freq}</div><div class="ts-freq">${sec.freq}</div></div></div>
       <div class="ts-body">${sec.items.map((t,i)=>{
         const id=`${sec.freq}|${i}`,done=taskDone.has(id);
         return`<div class="task-item ${done?'done':t.due?'due':''}" onclick="toggleTask('${id}')">
           <div class="chk ${done?'done':''}"></div>
           <div class="task-text">${t.text}</div>
-          <div class="task-mkt">${t.markets.join(' Â· ')}</div>
+          <div class="task-mkt">${t.markets.join(' · ')}</div>
         </div>`;
       }).join('')}</div>
     </div>`).join('');
@@ -3005,7 +3005,7 @@ function toggleTask(id){
   const wasDone=taskDone.has(id);
   wasDone?taskDone.delete(id):taskDone.add(id);
   renderSchedule();
-  if(!wasDone) toast('Task complete â','ok');
+  if(!wasDone) toast('Task complete ✓','ok');
   peStore_scheduleAutoSave();
 }
 
@@ -3020,23 +3020,23 @@ function renderReports(){
   ];
 
   const RPTS=[
-    {i:'ð',n:'Daily Morning Report',d:'Order summary, ACOS, TACOS, ROAS, Spend & Sales, campaign count.',f:'Every day',m:['CA','MX']},
-    {i:'â¡',n:'2-Day Optimization',d:'CA & MX optimization check + budget utilization.',f:'Every 2 days',m:['CA','MX']},
-    {i:'ð°',n:'Profit Margin Report',d:'Each product profit margin + organic and ads order details.',f:'Every 5 days',m:['CA','MX']},
-    {i:'ð',n:'Scale Report',d:'Best campaigns to scale up. Worst to cut or restructure.',f:'Every 6 days',m:['CA','MX']},
-    {i:'ð',n:'Weekly Search Term',d:'Search term sales (3+ orders). Negative report (Tuesday).',f:'Every 7 days',m:['CA','MX']},
-    {i:'ð»',n:'Low Impression Report',d:'Campaigns under 100 impressions + $3 spend below target.',f:'Every 10 days',m:['CA','MX']},
-    {i:'ð',n:'YoY Performance',d:'Last year same period best performance campaign list with target.',f:'Every 10 days',m:['CA','MX']},
-    {i:'ð',n:'14-Day ACOS/TACOS/Margin',d:'ACOS, TACOS and Profit Margin full list for last 14 days.',f:'Every 14 days',m:['CA','MX']},
-    {i:'ð¢',n:'Campaign Count per ASIN',d:'Campaign count check per each ASIN across markets.',f:'Every 15 days',m:['CA','MX']},
-    {i:'â©ï¸',n:'Return Rate Analysis',d:'Return rate data-only analysis across all products.',f:'Every 15 days',m:['CA','MX']},
-    {i:'ð',n:'New Launch Monitor',d:'New product impressions, CTR, CVR ramp. Keyword harvest trigger.',f:'Daily (launch period)',m:['CA','MX']},
+    {i:'🌅',n:'Daily Morning Report',d:'Order summary, ACOS, TACOS, ROAS, Spend & Sales, campaign count.',f:'Every day',m:['CA','MX']},
+    {i:'⚡',n:'2-Day Optimization',d:'CA & MX optimization check + budget utilization.',f:'Every 2 days',m:['CA','MX']},
+    {i:'💰',n:'Profit Margin Report',d:'Each product profit margin + organic and ads order details.',f:'Every 5 days',m:['CA','MX']},
+    {i:'📈',n:'Scale Report',d:'Best campaigns to scale up. Worst to cut or restructure.',f:'Every 6 days',m:['CA','MX']},
+    {i:'🔍',n:'Weekly Search Term',d:'Search term sales (3+ orders). Negative report (Tuesday).',f:'Every 7 days',m:['CA','MX']},
+    {i:'👻',n:'Low Impression Report',d:'Campaigns under 100 impressions + $3 spend below target.',f:'Every 10 days',m:['CA','MX']},
+    {i:'📅',n:'YoY Performance',d:'Last year same period best performance campaign list with target.',f:'Every 10 days',m:['CA','MX']},
+    {i:'📉',n:'14-Day ACOS/TACOS/Margin',d:'ACOS, TACOS and Profit Margin full list for last 14 days.',f:'Every 14 days',m:['CA','MX']},
+    {i:'🔢',n:'Campaign Count per ASIN',d:'Campaign count check per each ASIN across markets.',f:'Every 15 days',m:['CA','MX']},
+    {i:'↩️',n:'Return Rate Analysis',d:'Return rate data-only analysis across all products.',f:'Every 15 days',m:['CA','MX']},
+    {i:'🚀',n:'New Launch Monitor',d:'New product impressions, CTR, CVR ramp. Keyword harvest trigger.',f:'Daily (launch period)',m:['CA','MX']},
   ];
 
   // Show optimization cadence
   const optDiv = document.getElementById('reportsGrid')?.previousElementSibling;
   if(optDiv) {
-    let optHtml = '<div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:14px;box-shadow:var(--sh)"><div style="font-family:\'Inter\',system-ui,-apple-system,sans-serif;font-weight:700;font-size:12px;margin-bottom:10px">ð Optimization Cadence Rules</div>';
+    let optHtml = '<div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:14px;box-shadow:var(--sh)"><div style="font-family:\'Inter\',system-ui,-apple-system,sans-serif;font-weight:700;font-size:12px;margin-bottom:10px">🔄 Optimization Cadence Rules</div>';
     OPTIMIZATION_RULES.forEach(r=>{
       optHtml += `<div style="background:var(--surface2);border-left:3px solid var(--purple);border-radius:6px;padding:10px;margin-bottom:8px"><div style="font-weight:600;font-size:11px;color:var(--text)">${r.freq}: ${r.rule}</div><div style="font-size:10px;color:var(--muted);margin-top:2px">${r.details}</div></div>`;
     });
@@ -3058,7 +3058,7 @@ function renderReports(){
       <div class="rct"><div class="rci">${r.i}</div><div class="rcn">${r.n}</div><div class="rcd">${r.d}</div></div>
       <div class="rcm"><div class="rcf">Cadence: <span>${r.f}</span></div><div class="rctags">${r.m.map(m=>`<span class="mtag">${m}</span>`).join('')}</div></div>
     </div>`).join('');
-  document.getElementById('rasSubLbl').textContent=`Generated from ${rPreset==='14d'?'14-day':rPreset==='30d'?'30-day':rPreset} analysis Â· ${rmkt} Â· Review and approve to execute`;
+  document.getElementById('rasSubLbl').textContent=`Generated from ${rPreset==='14d'?'14-day':rPreset==='30d'?'30-day':rPreset} analysis · ${rmkt} · Review and approve to execute`;
   const actions=REPORT_ACTIONS_BY_MKT[rmkt]||REPORT_ACTIONS_BY_MKT['CA'];
   document.getElementById('actionGrid').innerHTML=actions.map((sec,si)=>`
     <div class="amc">
@@ -3069,14 +3069,14 @@ function renderReports(){
       <div class="amcb">${sec.actions.map((a,ai)=>{
         const key=`${rmkt}-${si}-${ai}`,done=actionDone.has(key);
         // Extract reason from description
-        const reasonMatch = a.desc.match(/â\s*(.+?)(?:\.|$)/);
+        const reasonMatch = a.desc.match(/—\s*(.+?)(?:\.|$)/);
         const reason = reasonMatch ? reasonMatch[1] : 'Optimization needed';
         return`<div class="ma">
           <div class="ma-camp">${a.camp}</div>
-          <div style="font-size:10px;color:var(--muted);margin:4px 0">ð Action: ${a.desc.split('â')[0].trim()}</div>
-          <div style="font-size:9px;color:var(--dim);margin:4px 0">ð¡ Reason: ${reason}</div>
-          <div class="ma-row"><span class="ma-from">${a.from}</span><span style="color:var(--dim)">â</span><span class="ma-to">${a.to}</span><span class="ma-pill ${a.pill}">${a.pt}</span></div>
-          ${done?`<div class="ma-done">â Approved & queued</div>`:`<div class="mabtns"><button class="ma-app" onclick="appAction('${key}')">â Approve</button><button class="ma-mod" onclick="toast('Use Modify in campaign AI panel','in')">â Modify</button><button class="ma-skip" onclick="skipAction('${key}')">Skip</button></div>`}
+          <div style="font-size:10px;color:var(--muted);margin:4px 0">📌 Action: ${a.desc.split('—')[0].trim()}</div>
+          <div style="font-size:9px;color:var(--dim);margin:4px 0">💡 Reason: ${reason}</div>
+          <div class="ma-row"><span class="ma-from">${a.from}</span><span style="color:var(--dim)">→</span><span class="ma-to">${a.to}</span><span class="ma-pill ${a.pill}">${a.pt}</span></div>
+          ${done?`<div class="ma-done">✓ Approved & queued</div>`:`<div class="mabtns"><button class="ma-app" onclick="appAction('${key}')">✓ Approve</button><button class="ma-mod" onclick="toast('Use Modify in campaign AI panel','in')">✏ Modify</button><button class="ma-skip" onclick="skipAction('${key}')">Skip</button></div>`}
         </div>`;
       }).join('')}</div>
     </div>`).join('');
@@ -3087,14 +3087,14 @@ function renderReports(){
     <div class="pt-card">
       <div class="pt-img">${p.emoji}</div>
       <div class="pt-name">${p.name}</div>
-      <div class="pt-asin">${p.asin} Â· ${p.brand} Â· ${p.price}</div>
-      <div style="font-size:10px;color:var(--muted);margin:6px 0;padding:6px;background:var(--surface2);border-radius:4px">ð Will be added to: <strong>${p.campaign||'TBD'}</strong></div>
+      <div class="pt-asin">${p.asin} · ${p.brand} · ${p.price}</div>
+      <div style="font-size:10px;color:var(--muted);margin:6px 0;padding:6px;background:var(--surface2);border-radius:4px">📌 Will be added to: <strong>${p.campaign||'TBD'}</strong></div>
       <div class="pt-mets">
         <div class="ptm"><div class="ptm-v" style="color:var(--green)">${p.conv}</div><div class="ptm-l">Est. CVR</div></div>
         <div class="ptm"><div class="ptm-v">${p.cpc}</div><div class="ptm-l">Est. CPC</div></div>
         <div class="ptm"><div class="ptm-v">${p.bsr}</div><div class="ptm-l">BSR</div></div>
       </div>
-      <div class="pt-reason">ð¡ ${p.rec}</div>
+      <div class="pt-reason">💡 ${p.rec}</div>
       <button class="pt-add" onclick="toast('Product target added to campaign queue','ok')">+ Add as Product Target</button>
     </div>`).join('');
 
@@ -3111,7 +3111,7 @@ function renderReports(){
     stGrid.innerHTML = searchTermMappings.map(m=>`
       <div style="background:var(--surface2);border:1.5px solid var(--border);border-radius:10px;padding:10px">
         <div style="font-weight:600;font-size:11px;color:var(--text);margin-bottom:4px">"${m.term}"</div>
-        <div style="font-size:10px;color:var(--muted);margin:4px 0">ð¯ ASIN: <strong>${m.asin}</strong></div>
+        <div style="font-size:10px;color:var(--muted);margin:4px 0">🎯 ASIN: <strong>${m.asin}</strong></div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:6px 0">
           <div style="background:var(--greenPale);border-radius:4px;padding:4px;text-align:center">
             <div style="font-weight:600;font-size:11px;color:var(--green)">${m.orders}</div>
@@ -3138,13 +3138,13 @@ function setRPreset(p,btn){
   document.querySelectorAll('#pg-reports .date-bar .dp').forEach(b=>b.classList.remove('act'));
   btn.classList.add('act');
   document.getElementById('rCustInputs').style.display=p==='custom'?'flex':'none';
-  if(p!=='custom'){const r=computeRange(p);document.getElementById('rDispVal').textContent=`${fmtShort(r.from)}â${fmtShort(r.to)}, 2026`;renderReports();toast('Report range updated','in');}
+  if(p!=='custom'){const r=computeRange(p);document.getElementById('rDispVal').textContent=`${fmtShort(r.from)}–${fmtShort(r.to)}, 2026`;renderReports();toast('Report range updated','in');}
   else{toast('Select custom date range and click Apply','in');}
 }
 function applyRCustom(){
   const f=document.getElementById('rFrom').value,t=document.getElementById('rTo').value;
   if(!f||!t||f>t){toast('Check date range','er');return;}
-  document.getElementById('rDispVal').textContent=f.slice(5)+' â '+t.slice(5);renderReports();toast('Custom report range applied','in');
+  document.getElementById('rDispVal').textContent=f.slice(5)+' → '+t.slice(5);renderReports();toast('Custom report range applied','in');
 }
 
 // ============================================================
@@ -3163,7 +3163,7 @@ async function runClaudeAnalysis(){
   const prompt=`You are an Amazon advertising expert analyzing campaign data for Purple Essences, a natural beauty brand selling in Canada and Mexico.
 
 Current performance snapshot:
-- ${mktData||'No campaign data yet â awaiting Amazon API connection'}
+- ${mktData||'No campaign data yet — awaiting Amazon API connection'}
 - Date range: ${document.getElementById('rDispVal').textContent}
 - Target ACOS: CA 32%, MX 35%
 - Markets: Canada (CA) and Mexico (MX) only
@@ -3177,24 +3177,24 @@ Provide 3-5 specific, actionable recommendations with exact numbers. Focus on: (
     const text=data.content?.find(b=>b.type==='text')?.text||'No response received';
     const lines=text.split('\n').filter(l=>l.trim());
     out.innerHTML=lines.map(l=>{
-      if(l.startsWith('â¢')||l.startsWith('-')||l.match(/^\d\./)){return`<div class="crec"><div class="crec-icon">â¡</div><div>${l.replace(/^[â¢\-\d\.]\s*/,'')}</div></div>`;}
+      if(l.startsWith('•')||l.startsWith('-')||l.match(/^\d\./)){return`<div class="crec"><div class="crec-icon">⚡</div><div>${l.replace(/^[•\-\d\.]\s*/,'')}</div></div>`;}
       return`<div style="margin-bottom:9px;color:var(--text);font-weight:500">${l}</div>`;
     }).join('');
     document.getElementById('claudeDot').style.background='var(--green)';
     document.getElementById('claudeStatusLbl').textContent='Connected';
     toast('Claude analysis complete','ok');
   }catch(e){
-    out.innerHTML=`<div style="color:var(--red);font-size:11px">â ï¸ Could not reach Claude API. Add your Anthropic API key in Settings to enable AI analysis. Demo mode: analysis shown below.</div><div style="margin-top:12px">${getDemoAnalysis()}</div>`;
-    toast('Using demo analysis â add API key in Settings','in');
+    out.innerHTML=`<div style="color:var(--red);font-size:11px">⚠️ Could not reach Claude API. Add your Anthropic API key in Settings to enable AI analysis. Demo mode: analysis shown below.</div><div style="margin-top:12px">${getDemoAnalysis()}</div>`;
+    toast('Using demo analysis — add API key in Settings','in');
   }
   btn.disabled=false;
   document.getElementById('claudeBtnTxt').textContent='Re-analyze with Claude AI';
 }
 
 function getDemoAnalysis(){
-  return`<div class="crec"><div class="crec-icon">â¡</div><div><strong>Setup Required:</strong> Connect your Amazon Advertising API in Settings to pull live campaign data for Canada and Mexico markets.</div></div>
-<div class="crec"><div class="crec-icon">â¡</div><div><strong>CA Strategy:</strong> Once connected, focus on exact match campaigns targeting "huile de lavande biologique" and other French-Canadian search terms with high volume and low competition.</div></div>
-<div class="crec"><div class="crec-icon">â¡</div><div><strong>MX Strategy:</strong> Target Spanish keywords like "aceite esencial lavanda orgÃ¡nico" â 15K+ monthly searches with only 3 competitors in the organic beauty niche.</div></div>`;
+  return`<div class="crec"><div class="crec-icon">⚡</div><div><strong>Setup Required:</strong> Connect your Amazon Advertising API in Settings to pull live campaign data for Canada and Mexico markets.</div></div>
+<div class="crec"><div class="crec-icon">⚡</div><div><strong>CA Strategy:</strong> Once connected, focus on exact match campaigns targeting "huile de lavande biologique" and other French-Canadian search terms with high volume and low competition.</div></div>
+<div class="crec"><div class="crec-icon">⚡</div><div><strong>MX Strategy:</strong> Target Spanish keywords like "aceite esencial lavanda orgánico" — 15K+ monthly searches with only 3 competitors in the organic beauty niche.</div></div>`;
 }
 
 // ============================================================
@@ -3218,28 +3218,28 @@ async function runContinuousAnalysis(){
   out.innerHTML=`
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:10px">
       <div class="ai-card">
-        <div class="ac-icon">ð</div>
+        <div class="ac-icon">📊</div>
         <div class="ac-val">${metrics.totalOrders}</div>
         <div class="ac-lbl">Total Orders (All Markets)</div>
-        <div class="ac-trend">â 12% vs last 7d</div>
+        <div class="ac-trend">↑ 12% vs last 7d</div>
       </div>
       <div class="ai-card">
-        <div class="ac-icon">ð°</div>
+        <div class="ac-icon">💰</div>
         <div class="ac-val">$${Math.round(metrics.totalSpend)}</div>
         <div class="ac-lbl">Total Ad Spend</div>
-        <div class="ac-trend">â Stable pace</div>
+        <div class="ac-trend">→ Stable pace</div>
       </div>
       <div class="ai-card">
-        <div class="ac-icon">ð</div>
+        <div class="ac-icon">📈</div>
         <div class="ac-val">${Math.round(metrics.avgAcos)}%</div>
         <div class="ac-lbl">Average ACOS</div>
-        <div class="ac-trend">â 3% above target</div>
+        <div class="ac-trend">↑ 3% above target</div>
       </div>
       <div class="ai-card">
-        <div class="ac-icon">ð¥</div>
+        <div class="ac-icon">🔥</div>
         <div class="ac-val">8</div>
         <div class="ac-lbl">Campaigns Needing Action</div>
-        <div class="ac-trend">â ï¸ Review recommended</div>
+        <div class="ac-trend">⚠️ Review recommended</div>
       </div>
     </div>
   `;
@@ -3253,9 +3253,9 @@ async function runCompetitorAnalysis(){
   await new Promise(r=>setTimeout(r,500));
 
   const competitors=[
-    {asin:'B07ABC1111',name:'Lavender Oil 30ml',price:'$22.99',priceChange:'-2.5%',bsrMove:'â 8â6',newListings:0,rec:'Price is competitive. Monitor BSR movement weekly.'},
-    {asin:'B08DEF2222',name:'Rose Mist 50ml',price:'$17.99',priceChange:'+1.2%',bsrMove:'â 12â18',newListings:2,rec:'Competition increasing. Budget +15% recommended.'},
-    {asin:'B06JKL4444',name:'Chamomile Oil 30ml',price:'$24.99',priceChange:'-4.1%',bsrMove:'â 24â19',newListings:1,rec:'Aggressive pricing detected. Maintain current bid strategy.'},
+    {asin:'B07ABC1111',name:'Lavender Oil 30ml',price:'$22.99',priceChange:'-2.5%',bsrMove:'↑ 8→6',newListings:0,rec:'Price is competitive. Monitor BSR movement weekly.'},
+    {asin:'B08DEF2222',name:'Rose Mist 50ml',price:'$17.99',priceChange:'+1.2%',bsrMove:'↓ 12→18',newListings:2,rec:'Competition increasing. Budget +15% recommended.'},
+    {asin:'B06JKL4444',name:'Chamomile Oil 30ml',price:'$24.99',priceChange:'-4.1%',bsrMove:'↑ 24→19',newListings:1,rec:'Aggressive pricing detected. Maintain current bid strategy.'},
   ];
 
   out.innerHTML=`
@@ -3264,9 +3264,9 @@ async function runCompetitorAnalysis(){
         <div class="ai-card">
           <div class="ac-header">${c.name}</div>
           <div style="font-size:10px;color:var(--muted);margin:6px 0">${c.asin}</div>
-          <div class="ac-metric"><span>ðµ</span><span>${c.price}</span><span style="color:${c.priceChange.includes('-')?'var(--green)':'var(--red)'};font-size:9px">${c.priceChange}</span></div>
-          <div class="ac-metric"><span>ð</span><span>BSR: ${c.bsrMove}</span></div>
-          <div class="ac-metric"><span>ð</span><span>${c.newListings} new competitors</span></div>
+          <div class="ac-metric"><span>💵</span><span>${c.price}</span><span style="color:${c.priceChange.includes('-')?'var(--green)':'var(--red)'};font-size:9px">${c.priceChange}</span></div>
+          <div class="ac-metric"><span>📊</span><span>BSR: ${c.bsrMove}</span></div>
+          <div class="ac-metric"><span>📈</span><span>${c.newListings} new competitors</span></div>
           <div style="font-size:10px;color:var(--blue);margin-top:8px;padding:6px;background:var(--bluePale);border-radius:4px">${c.rec}</div>
         </div>
       `).join('')}
@@ -3282,7 +3282,7 @@ async function runKeywordDiscovery(){
   await new Promise(r=>setTimeout(r,500));
 
   const keywords=[
-    {kw:'lavender oil stress relief',vol:3200,comp:'Low',opp:92,rec:'Untapped â High intent'},
+    {kw:'lavender oil stress relief',vol:3200,comp:'Low',opp:92,rec:'Untapped — High intent'},
     {kw:'organic sleep aid natural',vol:2800,comp:'Low',opp:88,rec:'Low competition, high volume'},
     {kw:'aromatherapy anxiety',vol:1900,comp:'Medium',opp:76,rec:'Emerging opportunity'},
     {kw:'rose water benefits skin',vol:2400,comp:'Medium',opp:72,rec:'Growing search trend'},
@@ -3295,7 +3295,7 @@ async function runKeywordDiscovery(){
         <div style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:10px;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center">
           <div>
             <div style="font-weight:600;font-size:11px;color:var(--text)">${k.kw}</div>
-            <div style="font-size:10px;color:var(--muted);margin-top:3px">ð ${k.vol.toLocaleString()}/mo Â· ${k.comp} competition Â· ${k.rec}</div>
+            <div style="font-size:10px;color:var(--muted);margin-top:3px">📊 ${k.vol.toLocaleString()}/mo · ${k.comp} competition · ${k.rec}</div>
             <div style="margin-top:4px;font-size:10px"><span style="background:var(--gold);color:#fff;padding:2px 6px;border-radius:3px;font-weight:600">Opp: ${k.opp}</span></div>
           </div>
           <button class="bsm p" onclick="toast('Added to campaign','ok')" style="white-space:nowrap">+ Add</button>
@@ -3320,18 +3320,18 @@ async function scanUnadvertisedDemand(){
         <div class="ai-card" style="border:2px solid var(--gold);background:linear-gradient(135deg,var(--goldPale) 0%,var(--surface) 100%)">
           <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px">
             <div>
-              <div class="ac-icon" style="font-size:24px">${p.category==='Essential Oils'?'ð¿':p.category==='Face Mists'?'ð¨':p.category==='Serums'?'â¨':'ð¦'}</div>
+              <div class="ac-icon" style="font-size:24px">${p.category==='Essential Oils'?'🌿':p.category==='Face Mists'?'💨':p.category==='Serums'?'✨':'📦'}</div>
             </div>
-            <span style="background:var(--gold);color:#fff;padding:3px 8px;border-radius:4px;font-size:9px;font-weight:700">ð¥ HIGH DEMAND</span>
+            <span style="background:var(--gold);color:#fff;padding:3px 8px;border-radius:4px;font-size:9px;font-weight:700">🔥 HIGH DEMAND</span>
           </div>
           <div class="ac-val" style="color:var(--text)">${p.name}</div>
           <div style="font-size:10px;color:var(--muted);margin:6px 0">${p.asin}</div>
-          <div class="ac-metric" style="margin:6px 0"><span>ð</span><span>${p.demand.toLocaleString()} monthly searches</span></div>
-          <div class="ac-metric" style="margin:6px 0"><span>ð°</span><span>${p.price}</span></div>
-          <div class="ac-metric" style="margin:6px 0"><span>ð</span><span>Trend: ${p.trend}</span></div>
-          <div class="ac-metric" style="margin:6px 0"><span>ð</span><span>${p.competition}</span></div>
+          <div class="ac-metric" style="margin:6px 0"><span>📊</span><span>${p.demand.toLocaleString()} monthly searches</span></div>
+          <div class="ac-metric" style="margin:6px 0"><span>💰</span><span>${p.price}</span></div>
+          <div class="ac-metric" style="margin:6px 0"><span>📈</span><span>Trend: ${p.trend}</span></div>
+          <div class="ac-metric" style="margin:6px 0"><span>🆚</span><span>${p.competition}</span></div>
           <div style="font-size:10px;color:var(--blue);margin:8px 0;padding:6px;background:var(--bluePale);border-radius:4px;text-align:center;font-weight:600">Est. Starting Budget: $25-40/day</div>
-          <button class="bprim" style="width:100%;margin-top:8px;padding:8px" onclick="toast('Launch Builder opened','ok')">ð Create Campaign</button>
+          <button class="bprim" style="width:100%;margin-top:8px;padding:8px" onclick="toast('Launch Builder opened','ok')">🚀 Create Campaign</button>
         </div>
       `).join('')}
     </div>
@@ -3354,12 +3354,12 @@ const LAUNCH_KWS = [
 ];
 
 const LAUNCH_PTS = [
-  {emoji:'ð¸',name:'AromaMax Lavender 120ml',asin:'B07ABC1111',bsr:'#182',bid:'0.90',selected:true},
-  {emoji:'ð§´',name:'NaturePure Essential Oil 100ml',asin:'B08DEF2222',bsr:'#241',bid:'0.85',selected:true},
-  {emoji:'ð',name:'ZenScent Aromatherapy Blend',asin:'B09GHI3333',bsr:'#318',bid:'0.80',selected:false},
-  {emoji:'ð¿',name:'PetalDew Rose Water 200ml',asin:'B06JKL4444',bsr:'#154',bid:'0.90',selected:true},
-  {emoji:'ð«§',name:'ClearLeaf Tea Tree Oil',asin:'B10MNO5555',bsr:'#421',bid:'0.75',selected:false},
-  {emoji:'ðº',name:'BotanIQ Geranium Blend',asin:'B11PQR6666',bsr:'#512',bid:'0.70',selected:false},
+  {emoji:'🌸',name:'AromaMax Lavender 120ml',asin:'B07ABC1111',bsr:'#182',bid:'0.90',selected:true},
+  {emoji:'🧴',name:'NaturePure Essential Oil 100ml',asin:'B08DEF2222',bsr:'#241',bid:'0.85',selected:true},
+  {emoji:'💆',name:'ZenScent Aromatherapy Blend',asin:'B09GHI3333',bsr:'#318',bid:'0.80',selected:false},
+  {emoji:'🌿',name:'PetalDew Rose Water 200ml',asin:'B06JKL4444',bsr:'#154',bid:'0.90',selected:true},
+  {emoji:'🫧',name:'ClearLeaf Tea Tree Oil',asin:'B10MNO5555',bsr:'#421',bid:'0.75',selected:false},
+  {emoji:'🌺',name:'BotanIQ Geranium Blend',asin:'B11PQR6666',bsr:'#512',bid:'0.70',selected:false},
 ];
 
 let launchKws = LAUNCH_KWS.map(k=>({...k}));
@@ -3368,7 +3368,7 @@ let currentLaunchStep = 1;
 
 function openLaunchBuilder(){
   const asin = document.getElementById('asinField').value || 'B08XYZ1234';
-  document.getElementById('lmAsinLbl').textContent = `ASIN: ${asin} Â· Purple Essences Lavender Essential Oil 100ml`;
+  document.getElementById('lmAsinLbl').textContent = `ASIN: ${asin} · Purple Essences Lavender Essential Oil 100ml`;
   currentLaunchStep = 1;
   renderLmKwList();
   renderLmPtGrid();
@@ -3435,7 +3435,7 @@ function addCustomKw(){
   const v=document.getElementById('lmKwInput').value.trim();
   if(!v){toast('Enter a keyword','er');return;}
   const match=document.getElementById('lmKwMatchAdd').value;
-  launchKws.push({kw:v,vol:'â',bid:'1.00',match,selected:true});
+  launchKws.push({kw:v,vol:'—',bid:'1.00',match,selected:true});
   document.getElementById('lmKwInput').value='';
   renderLmKwList();
   toast(`Added "${v}"`, 'ok');
@@ -3447,7 +3447,7 @@ function renderLmPtGrid(){
     <div class="lm-pt-card ${p.selected?'selected':''}" onclick="togglePt(${i})" id="lmpt${i}">
       <div class="lm-pt-img">${p.emoji}</div>
       <div class="lm-pt-name">${p.name}</div>
-      <div class="lm-pt-asin">${p.asin} Â· BSR ${p.bsr}</div>
+      <div class="lm-pt-asin">${p.asin} · BSR ${p.bsr}</div>
       <div class="lm-pt-bid-row">
         <div class="lm-pt-bid-lbl">Bid:</div>
         <input class="lm-pt-bid" value="$${p.bid}" onclick="event.stopPropagation()" onchange="updatePtBid(${i},this.value)">
@@ -3471,7 +3471,7 @@ function selectNonePts(){launchPts.forEach(p=>p.selected=false);renderLmPtGrid()
 function addCustomPt(){
   const v=document.getElementById('lmPtInput').value.trim().toUpperCase();
   if(!v||v.length<10){toast('Enter a valid 10-char ASIN','er');return;}
-  launchPts.push({emoji:'ð¦',name:v,asin:v,bsr:'â',bid:'0.80',selected:true});
+  launchPts.push({emoji:'📦',name:v,asin:v,bsr:'—',bid:'0.80',selected:true});
   document.getElementById('lmPtInput').value='';
   renderLmPtGrid();
   toast(`Product target ${v} added`,'ok');
@@ -3497,18 +3497,18 @@ function buildCampPreview(){
   const broad=selKws.filter(k=>k.match==='broad');
 
   let camps=[];
-  if(exact.length) camps.push({ico:'ð¯',cls:'lc-kw',name:`PE | ${asin} | Exact Match | Launch`,meta:`${exact.length} exact match keywords Â· Avg bid ${defBid} Â· Budget ${kwBudget}/day`,tags:['SP','Exact',kwBudget+'/day',defBid+' avg bid']});
-  if(phrase.length) camps.push({ico:'ð¬',cls:'lc-kw',name:`PE | ${asin} | Phrase Match | Launch`,meta:`${phrase.length} phrase match keywords Â· Avg bid ${defBid} Â· Budget ${kwBudget}/day`,tags:['SP','Phrase',kwBudget+'/day',defBid+' avg bid']});
-  if(broad.length) camps.push({ico:'ð',cls:'lc-kw',name:`PE | ${asin} | Broad Match | Harvest`,meta:`${broad.length} broad match keywords (harvest data) Â· Budget ${kwBudget}/day`,tags:['SP','Broad',kwBudget+'/day','Harvest mode']});
-  if(selPts.length) camps.push({ico:'ð¯',cls:'lc-pt',name:`PE | ${asin} | Product Targeting | Launch`,meta:`${selPts.length} product targets Â· Bid ${ptBid} Â· Budget ${ptBudget}/day`,tags:['SP','Product Target',ptBudget+'/day',ptBid+' bid']});
-  camps.push({ico:'â¡',cls:'lc-auto',name:`PE | ${asin} | Auto | Discovery`,meta:`Auto campaign for search term discovery Â· Budget ${autoBudget}/day Â· ${days} day launch period`,tags:['SP','Auto',autoBudget+'/day','Discovery']});
+  if(exact.length) camps.push({ico:'🎯',cls:'lc-kw',name:`PE | ${asin} | Exact Match | Launch`,meta:`${exact.length} exact match keywords · Avg bid ${defBid} · Budget ${kwBudget}/day`,tags:['SP','Exact',kwBudget+'/day',defBid+' avg bid']});
+  if(phrase.length) camps.push({ico:'💬',cls:'lc-kw',name:`PE | ${asin} | Phrase Match | Launch`,meta:`${phrase.length} phrase match keywords · Avg bid ${defBid} · Budget ${kwBudget}/day`,tags:['SP','Phrase',kwBudget+'/day',defBid+' avg bid']});
+  if(broad.length) camps.push({ico:'🌐',cls:'lc-kw',name:`PE | ${asin} | Broad Match | Harvest`,meta:`${broad.length} broad match keywords (harvest data) · Budget ${kwBudget}/day`,tags:['SP','Broad',kwBudget+'/day','Harvest mode']});
+  if(selPts.length) camps.push({ico:'🎯',cls:'lc-pt',name:`PE | ${asin} | Product Targeting | Launch`,meta:`${selPts.length} product targets · Bid ${ptBid} · Budget ${ptBudget}/day`,tags:['SP','Product Target',ptBudget+'/day',ptBid+' bid']});
+  camps.push({ico:'⚡',cls:'lc-auto',name:`PE | ${asin} | Auto | Discovery`,meta:`Auto campaign for search term discovery · Budget ${autoBudget}/day · ${days} day launch period`,tags:['SP','Auto',autoBudget+'/day','Discovery']});
 
   const totalBudget=camps.reduce((a,c)=>{const b=parseFloat((c.tags[2]||'0').replace(/[^0-9.]/g,''))||0;return a+b;},0);
 
   document.getElementById('lmCampPreview').innerHTML=`
     <div class="lm-camp-preview-title">
-      ð ${camps.length} campaigns to create
-      <span style="margin-left:auto;font-size:10px;color:var(--muted);font-weight:500">Total daily budget: <strong style="color:var(--text)">$${totalBudget}/day</strong> Â· Portfolio: <strong style="color:var(--text)">${portfolio}</strong> Â· Strategy: <strong style="color:var(--text)">${stratLbl[strategy]}</strong></span>
+      📋 ${camps.length} campaigns to create
+      <span style="margin-left:auto;font-size:10px;color:var(--muted);font-weight:500">Total daily budget: <strong style="color:var(--text)">$${totalBudget}/day</strong> · Portfolio: <strong style="color:var(--text)">${portfolio}</strong> · Strategy: <strong style="color:var(--text)">${stratLbl[strategy]}</strong></span>
     </div>
     ${camps.map(c=>`
       <div class="lm-camp-row">
@@ -3535,11 +3535,11 @@ function createLaunchCampaigns(){
     const broad=selKws.filter(k=>k.match==='broad');
 
     let created=[];
-    if(exact.length) created.push({ico:'ð¯',name:`PE | ${asin} | Exact Match | Launch`});
-    if(phrase.length) created.push({ico:'ð¬',name:`PE | ${asin} | Phrase Match | Launch`});
-    if(broad.length) created.push({ico:'ð',name:`PE | ${asin} | Broad Match | Harvest`});
-    if(selPts.length) created.push({ico:'ð¯',name:`PE | ${asin} | Product Targeting | Launch`});
-    created.push({ico:'â¡',name:`PE | ${asin} | Auto | Discovery`});
+    if(exact.length) created.push({ico:'🎯',name:`PE | ${asin} | Exact Match | Launch`});
+    if(phrase.length) created.push({ico:'💬',name:`PE | ${asin} | Phrase Match | Launch`});
+    if(broad.length) created.push({ico:'🌐',name:`PE | ${asin} | Broad Match | Harvest`});
+    if(selPts.length) created.push({ico:'🎯',name:`PE | ${asin} | Product Targeting | Launch`});
+    created.push({ico:'⚡',name:`PE | ${asin} | Auto | Discovery`});
 
     [1,2,3,4].forEach(i=>{const el=document.getElementById('lmStep'+i);if(el)el.style.display='none';});
     document.getElementById('lmSuccess').style.display='block';
@@ -3568,8 +3568,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 // ============================================================
 const DEFAULT_RULES = [
   {id:'r1',name:'Pause High ACOS',desc:'Pause campaigns where ACOS exceeds threshold',field:'threshold',value:'100',unit:'%',active:true},
-  {id:'r2',name:'Increase Bid â Under Target',desc:'Suggest bid increase when ACOS < target by margin',field:'margin',value:'6',unit:'% below target',active:true},
-  {id:'r3',name:'Decrease Bid â Over Target',desc:'Suggest bid decrease when ACOS > target by margin',field:'margin',value:'5',unit:'% above target',active:true},
+  {id:'r2',name:'Increase Bid — Under Target',desc:'Suggest bid increase when ACOS < target by margin',field:'margin',value:'6',unit:'% below target',active:true},
+  {id:'r3',name:'Decrease Bid — Over Target',desc:'Suggest bid decrease when ACOS > target by margin',field:'margin',value:'5',unit:'% above target',active:true},
   {id:'r4',name:'Budget Exhaustion Alert',desc:'Alert when campaign exhausts budget before end of day',field:'by_hour',value:'14',unit:'hour of day',active:true},
   {id:'r5',name:'Low Impression Alert',desc:'Flag campaigns with fewer than N impressions per day',field:'min_imp',value:'100',unit:'impressions',active:true},
   {id:'r6',name:'Zero Conversion Pause',desc:'Suggest pause after N days with spend but 0 conversions',field:'days',value:'7',unit:'days',active:true},
@@ -3632,16 +3632,16 @@ function renderStoreStats() {
 function renderRules(){
   const c=document.getElementById('rulesContainer');if(!c)return;
   c.innerHTML='<div style="font-size:10px;color:var(--muted);font-weight:500;margin-bottom:6px">Rules drive AI suggestions. Toggle, edit values, or remove.</div>'+
-  appRules.map((r,i)=>`<div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:8px;align-items:center;padding:9px 11px;background:var(--surface2);border-radius:8px;border:1.5px solid var(--border);opacity:${r.active?1:.5}"><input type="checkbox" ${r.active?'checked':''} style="accent-color:var(--purple);width:13px;height:13px" onchange="toggleRule(${i},this.checked)"><div><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:10px">${r.name}</div><div style="font-size:9px;color:var(--muted)">${r.desc}</div></div><div style="display:flex;align-items:center;gap:5px"><input class="lm-set-input" value="${r.value}" style="width:55px;text-align:center;padding:5px" onchange="updateRule(${i},this.value)"><span style="font-size:9px;color:var(--muted);white-space:nowrap">${r.unit}</span></div><button onclick="removeRule(${i})" style="background:none;border:none;color:var(--muted);cursor:pointer;font-size:13px;padding:2px 5px">â</button></div>`).join('');
+  appRules.map((r,i)=>`<div style="display:grid;grid-template-columns:auto 1fr auto auto;gap:8px;align-items:center;padding:9px 11px;background:var(--surface2);border-radius:8px;border:1.5px solid var(--border);opacity:${r.active?1:.5}"><input type="checkbox" ${r.active?'checked':''} style="accent-color:var(--purple);width:13px;height:13px" onchange="toggleRule(${i},this.checked)"><div><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:10px">${r.name}</div><div style="font-size:9px;color:var(--muted)">${r.desc}</div></div><div style="display:flex;align-items:center;gap:5px"><input class="lm-set-input" value="${r.value}" style="width:55px;text-align:center;padding:5px" onchange="updateRule(${i},this.value)"><span style="font-size:9px;color:var(--muted);white-space:nowrap">${r.unit}</span></div><button onclick="removeRule(${i})" style="background:none;border:none;color:var(--muted);cursor:pointer;font-size:13px;padding:2px 5px">✕</button></div>`).join('');
 }
 function toggleRule(i,v){appRules[i].active=v;renderRules();logChange(`Rule "${appRules[i].name}" ${v?'enabled':'disabled'}`);}
-function updateRule(i,v){const old=appRules[i].value;appRules[i].value=v;logChange(`Rule "${appRules[i].name}" threshold: ${old} â ${v}`);}
+function updateRule(i,v){const old=appRules[i].value;appRules[i].value=v;logChange(`Rule "${appRules[i].name}" threshold: ${old} → ${v}`);}
 function removeRule(i){const n=appRules[i].name;appRules.splice(i,1);renderRules();logChange(`Rule "${n}" removed`);}
 function addRule(){appRules.push({id:'r'+Date.now(),name:'New Rule',desc:'Edit threshold below',field:'threshold',value:'50',unit:'%',active:true});renderRules();logChange('Custom rule added');}
 
 function renderStaffList(){
   const c=document.getElementById('staffList');if(!c)return;
-  c.innerHTML=staffMembers.map((s,i)=>`<div style="display:flex;align-items:center;gap:8px;padding:8px 10px;background:var(--surface2);border-radius:7px;border:1px solid var(--border)"><div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#6d28d9,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:700;flex-shrink:0">${s.name[0]}</div><div style="flex:1"><div style="font-weight:600;font-size:11px">${s.name} <span style="font-size:9px;color:var(--muted)">â ${s.role}</span></div><div style="font-size:9px;color:var(--muted)">${s.email} Â· ${s.markets.join(', ')}</div></div><button onclick="removeStaff(${i})" style="background:none;border:none;color:var(--muted);cursor:pointer;font-size:11px;padding:3px 6px">â</button></div>`).join('');
+  c.innerHTML=staffMembers.map((s,i)=>`<div style="display:flex;align-items:center;gap:8px;padding:8px 10px;background:var(--surface2);border-radius:7px;border:1px solid var(--border)"><div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#6d28d9,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;font-weight:700;flex-shrink:0">${s.name[0]}</div><div style="flex:1"><div style="font-weight:600;font-size:11px">${s.name} <span style="font-size:9px;color:var(--muted)">— ${s.role}</span></div><div style="font-size:9px;color:var(--muted)">${s.email} · ${s.markets.join(', ')}</div></div><button onclick="removeStaff(${i})" style="background:none;border:none;color:var(--muted);cursor:pointer;font-size:11px;padding:3px 6px">✕</button></div>`).join('');
 }
 function removeStaff(i){const n=staffMembers[i].name;staffMembers.splice(i,1);renderStaffList();logChange(`Staff "${n}" removed`);}
 function addStaff(){
@@ -3654,7 +3654,7 @@ function addStaff(){
 
 function renderAsinTable(){
   const c=document.getElementById('asinTable');if(!c)return;
-  c.innerHTML=trackedAsins.map((a,i)=>`<div style="background:var(--surface2);border:1.5px solid var(--border);border-radius:10px;padding:12px 13px;opacity:${a.active?1:.55}"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:7px"><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:9px;color:var(--purple)">${a.asin}</div><label style="display:flex;align-items:center;gap:4px;cursor:pointer;font-size:8px;color:var(--muted)"><input type="checkbox" ${a.active?'checked':''} style="accent-color:var(--purple)" onchange="toggleAsin(${i},this.checked)">Active</label></div><div style="font-size:11px;font-weight:600;margin-bottom:3px;line-height:1.3">${a.name}${a.isNew?' <span style="font-size:8px;padding:2px 6px;border-radius:4px;background:#fce7f3;color:#be185d;font-weight:700">NEW</span>':''}</div><div style="font-size:9px;color:var(--muted);margin-bottom:7px">SKU: ${a.sku}</div><div style="display:flex;gap:3px;flex-wrap:wrap;margin-bottom:8px">${a.markets.map(m=>`<span style="font-size:8px;padding:2px 6px;border-radius:3px;background:var(--purplePale);color:var(--purple);font-weight:600">${m}</span>`).join('')}</div><button onclick="editAsin(${i})" style="width:100%;padding:5px;border-radius:5px;font-size:9px;font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;cursor:pointer;border:1.5px solid var(--border2);background:transparent;color:var(--muted)">â Edit</button></div>`).join('')+
+  c.innerHTML=trackedAsins.map((a,i)=>`<div style="background:var(--surface2);border:1.5px solid var(--border);border-radius:10px;padding:12px 13px;opacity:${a.active?1:.55}"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:7px"><div style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;font-size:9px;color:var(--purple)">${a.asin}</div><label style="display:flex;align-items:center;gap:4px;cursor:pointer;font-size:8px;color:var(--muted)"><input type="checkbox" ${a.active?'checked':''} style="accent-color:var(--purple)" onchange="toggleAsin(${i},this.checked)">Active</label></div><div style="font-size:11px;font-weight:600;margin-bottom:3px;line-height:1.3">${a.name}${a.isNew?' <span style="font-size:8px;padding:2px 6px;border-radius:4px;background:#fce7f3;color:#be185d;font-weight:700">NEW</span>':''}</div><div style="font-size:9px;color:var(--muted);margin-bottom:7px">SKU: ${a.sku}</div><div style="display:flex;gap:3px;flex-wrap:wrap;margin-bottom:8px">${a.markets.map(m=>`<span style="font-size:8px;padding:2px 6px;border-radius:3px;background:var(--purplePale);color:var(--purple);font-weight:600">${m}</span>`).join('')}</div><button onclick="editAsin(${i})" style="width:100%;padding:5px;border-radius:5px;font-size:9px;font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:700;cursor:pointer;border:1.5px solid var(--border2);background:transparent;color:var(--muted)">✏ Edit</button></div>`).join('')+
   `<div style="background:var(--surface2);border:1.5px dashed var(--border2);border-radius:10px;padding:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;cursor:pointer;min-height:140px" onclick="openAddAsin()"><div style="font-size:28px;opacity:.25">+</div><div style="font-size:10px;color:var(--muted);font-weight:600">Add ASIN</div></div>`;
 }
 function toggleAsin(i,v){trackedAsins[i].active=v;renderAsinTable();logChange(`ASIN ${trackedAsins[i].asin} ${v?'activated':'deactivated'}`);}
@@ -3684,7 +3684,7 @@ function clearLog(){changeLog=[];renderChangeLog();}
 function saveAllSettings(){
   peStore_save();
   logChange('All settings saved');
-  toast('All settings saved â','ok');
+  toast('All settings saved ✓','ok');
 }
 function exportSettings(){
   peStore_exportJSON();
@@ -3849,7 +3849,7 @@ function renderDpGrid(){
           else cls='normal';
           lbl=mult.toFixed(1)+'x';
         }
-        const tooltip=`${dayNames[d]} â ${h}:00 â Bid mult: ${mult}x`;
+        const tooltip=`${dayNames[d]} — ${h}:00 — Bid mult: ${mult}x`;
         html+=`<div class="dp-grid-cell ${cls}" onclick="toggleDpHour('${key}',${d},${h})" title="${tooltip}">${lbl}</div>`;
       }
     }
@@ -3858,7 +3858,7 @@ function renderDpGrid(){
     selCamps.forEach(c=>{
       const key=dpMarket+'-'+c.id;
       if(!dpSchedule[key]) dpSchedule[key]=Array.from({length:7},()=>Array.from({length:24},()=>({on:false,mult:1.0})));
-      html+=`<div class="dp-grid-camp-name" title="${c.name}">${c.name.length>22?c.name.slice(0,22)+'â¦':c.name}</div>`;
+      html+=`<div class="dp-grid-camp-name" title="${c.name}">${c.name.length>22?c.name.slice(0,22)+'…':c.name}</div>`;
       for(let h=0;h<24;h++){
         const dayData=dpSchedule[key][dpCurrentDay];
         const cell=dayData?.[h];
@@ -3873,7 +3873,7 @@ function renderDpGrid(){
           else cls='normal';
           lbl=mult.toFixed(1)+'x';
         }
-        const tooltip=`${c.name} â ${h}:00 â Bid mult: ${mult}x`;
+        const tooltip=`${c.name} — ${h}:00 — Bid mult: ${mult}x`;
         html+=`<div class="dp-grid-cell ${cls}" onclick="toggleDpHour('${key}',${dpCurrentDay},${h})" title="${tooltip}">${lbl}</div>`;
       }
     });
@@ -3949,7 +3949,7 @@ function renderDpHeatmap(){
       else if(pct < 65) color = '#fed7aa'; // orange
       else color = '#fecaca'; // red
 
-      html += `<div style="background:${color};border:1px solid var(--border);padding:6px;font-size:9px;font-weight:600;text-align:center;cursor:pointer;border-radius:4px" title="${day} ${h}:00 â ACOS ${acos}%">${acos}%</div>`;
+      html += `<div style="background:${color};border:1px solid var(--border);padding:6px;font-size:9px;font-weight:600;text-align:center;cursor:pointer;border-radius:4px" title="${day} ${h}:00 — ACOS ${acos}%">${acos}%</div>`;
     }
   });
   html += '</div>';
@@ -4087,7 +4087,7 @@ function applyDayParting(){
     if(!sched) return false;
     return sched.flat().some(v=>v?.on);
   });
-  if(!configured.length){toast('Set hours first â all campaigns are OFF','er');return;}
+  if(!configured.length){toast('Set hours first — all campaigns are OFF','er');return;}
   toast(`Day parting applied to ${configured.length} campaigns in ${dpMarket}!`,'ok');
 }
 
@@ -4135,7 +4135,7 @@ function countDataItems(dataSection){
   return {campaigns, tasks, reports};
 }
 
-// Compare two HTML strings â section-level diff
+// Compare two HTML strings — section-level diff
 function diffVersions(oldHtml, newHtml){
   const sections = [
     {name:'DATA (campaign data, tasks)', start: DATA_MARKER_START, end: DATA_MARKER_END},
@@ -4180,25 +4180,25 @@ function handleUpdateFile(input){
   if(!file) return;
   pendingUpdateName = file.name;
   showUpdateState('updateAnalyzing');
-  document.getElementById('updateAnalyzingMsg').textContent = `Reading ${file.name}â¦`;
+  document.getElementById('updateAnalyzingMsg').textContent = `Reading ${file.name}…`;
 
   const reader = new FileReader();
   reader.onload = function(e){
     try{
       const newHTML = e.target.result;
-      document.getElementById('updateAnalyzingMsg').textContent = 'Comparing data sectionsâ¦';
+      document.getElementById('updateAnalyzingMsg').textContent = 'Comparing data sections…';
 
       // Validate it's a PE app file
       if(!newHTML.includes(DATA_MARKER_START) || !newHTML.includes(DATA_MARKER_END)){
         showUpdateState('updateIdle');
-        toast('Invalid file â not a Purple Essences app file','er');
+        toast('Invalid file — not a Purple Essences app file','er');
         input.value = '';
         return;
       }
 
       pendingUpdateHTML = newHTML;
       setTimeout(()=>{
-        document.getElementById('updateAnalyzingMsg').textContent = 'Building diffâ¦';
+        document.getElementById('updateAnalyzingMsg').textContent = 'Building diff…';
         setTimeout(()=> showUpdatePreview(newHTML), 400);
       }, 600);
     }catch(err){
@@ -4225,11 +4225,11 @@ function showUpdatePreview(newHTML){
 
   document.getElementById('preservedCount').textContent = preserved + '+';
   document.getElementById('newFeaturesCount').textContent = updated;
-  document.getElementById('versionLabel').textContent = `${currentVer} â ${newVer}`;
+  document.getElementById('versionLabel').textContent = `${currentVer} → ${newVer}`;
 
   // Render diff
   const statusColors = {unchanged:'#6b7280', updated:'#1d4ed8', new:'#16a34a', removed:'#dc2626'};
-  const statusIcons  = {unchanged:'â', updated:'â', new:'â', removed:'â'};
+  const statusIcons  = {unchanged:'●', updated:'◆', new:'✚', removed:'✖'};
   const statusLabels = {unchanged:'Unchanged', updated:'Updated', new:'New in v'+newVer, removed:'Removed'};
   document.getElementById('updateDiff').innerHTML = diff.map(d=>`
     <div style="display:flex;align-items:baseline;gap:8px;padding:3px 0;border-bottom:1px solid var(--border)">
@@ -4239,11 +4239,11 @@ function showUpdatePreview(newHTML){
       ${d.sizeDiff !== undefined ? `<span style="color:${d.sizeDiff>0?'#16a34a':'#dc2626'};font-size:9px;margin-left:auto">${d.sizeDiff>0?'+':''}${d.sizeDiff} chars</span>` : ''}
     </div>`).join('') +
     `<div style="margin-top:8px;padding:8px;background:#dcfce7;border-radius:6px;font-size:9px;color:#16a34a;font-weight:600">
-      â DATA section (${items.campaigns} campaigns, ${items.tasks} tasks, all settings) will be taken from your CURRENT app
+      ✓ DATA section (${items.campaigns} campaigns, ${items.tasks} tasks, all settings) will be taken from your CURRENT app
     </div>`;
 
   showUpdateState('updatePreview');
-  logChange(`Update preview: ${pendingUpdateName} â ${updated} section(s) will change`);
+  logChange(`Update preview: ${pendingUpdateName} — ${updated} section(s) will change`);
 }
 
 function applyUpdate(){
@@ -4290,7 +4290,7 @@ function applyUpdate(){
     const diff = diffVersions(currentHTML, pendingUpdateHTML);
     recordUpdate(currentVer, newVer, diff, finalHTML.length);
 
-    logChange(`App updated to ${newVer} â data preserved, ${finalHTML.length} chars total`);
+    logChange(`App updated to ${newVer} — data preserved, ${finalHTML.length} chars total`);
     showUpdateState('updateSuccess');
     document.getElementById('updateFileInput').value = '';
     pendingUpdateHTML = null;
@@ -4348,7 +4348,7 @@ function renderVersionHistory(){
   const initVer = document.getElementById('vhInitialVersion');
   const currentVer = document.getElementById('currentVersionBadge')?.textContent || 'v4b';
 
-  if(badge) badge.textContent = `${currentVer} â Current`;
+  if(badge) badge.textContent = `${currentVer} — Current`;
   if(initVer) initVer.textContent = currentVer;
 
   if(!list) return;
@@ -4378,7 +4378,7 @@ function renderVersionHistory(){
           <span style="font-family:'Inter',system-ui,-apple-system,sans-serif;font-weight:800;font-size:12px">${entry.toVer||'unknown'}</span>
           ${isLatest?'<span style="font-size:8px;padding:2px 7px;border-radius:10px;background:#ede9fe;color:#6d28d9;font-weight:700">CURRENT</span>':''}
           <span style="font-size:9px;color:var(--muted)">from ${entry.fromVer||'?'}</span>
-          <span style="font-size:9px;color:var(--muted);margin-left:auto">${dateStr} Â· ${timeStr}${kb?' Â· '+kb:''}</span>
+          <span style="font-size:9px;color:var(--muted);margin-left:auto">${dateStr} · ${timeStr}${kb?' · '+kb:''}</span>
         </div>
         <div style="display:flex;gap:5px;flex-wrap:wrap">
           ${(entry.sectionsChanged||[]).map(s=>`<span style="font-size:8px;padding:2px 7px;border-radius:4px;background:var(--surface2);color:var(--text);border:1px solid var(--border);font-weight:500">${s}</span>`).join('')}
@@ -4427,7 +4427,7 @@ function saveSettings(){
   }
   if(h10k){
     const ico=document.getElementById('h10StatusIco');
-    if(ico){ico.textContent='â Connected';ico.style.color='#16a34a';}
+    if(ico){ico.textContent='● Connected';ico.style.color='#16a34a';}
   }
   if(claudeApiKey){
     document.getElementById('claudeDot').style.background='var(--purple)';
@@ -4456,7 +4456,7 @@ function confirmModify(){
   modified[modifyTarget.id]=val;
   closeMo('modifyModal');
   renderAI(MKTS[market].recs);
-  toast(`Modified to ${val} â approve to execute`,'in');
+  toast(`Modified to ${val} — approve to execute`,'in');
 }
 document.querySelectorAll('.mo').forEach(m=>m.addEventListener('click',function(e){if(e.target===this)this.classList.remove('open');}));
 
@@ -4464,7 +4464,7 @@ document.querySelectorAll('.mo').forEach(m=>m.addEventListener('click',function(
 // TOAST
 // ============================================================
 function toast(msg,type='in'){
-  const ic={ok:'â',er:'â',in:'â¹'};
+  const ic={ok:'✓',er:'✕',in:'ℹ'};
   const c=document.getElementById('toastC');
   const t=document.createElement('div');
   t.className=`toast ${type}`;
