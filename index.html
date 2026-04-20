@@ -2545,19 +2545,19 @@ const AMZ_PROFILES={CA:'217031416894921',MX:'4197744967944144'};
 let liveDataLoaded=false;
 
 async function fetchLiveData(){
-  const creds=window._peLoadedCredentials||{};
-  const cid=creds.clientId;
-  const cs=creds.clientSecret;
-  const rt=creds.refreshToken;
+  const store=peStore_load();
+  const cid=store.credentials?.clientId;
+  const cs=store.credentials?.clientSecret;
+  const rt=store.credentials?.refreshToken;
   if(!cid||!cs||!rt){console.log('No API credentials');return;}
   toast('Fetching live campaign data...','in');
-  const creds={refreshToken:rt,clientId:cid,clientSecret:cs};
+  const apiCreds={refreshToken:rt,clientId:cid,clientSecret:cs};
   for(const mkt of ['CA','MX']){
     const pid=AMZ_PROFILES[mkt];if(!pid)continue;
     try{
       let allCampaigns=[],nextToken=null;
       do{
-        const body={...creds,action:'sp-campaigns',profileId:pid};
+        const body={...apiCreds,action:'sp-campaigns',profileId:pid};
         if(nextToken)body.params={nextToken};
         const res=await fetch('/api/amazon',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
         const data=await res.json();
@@ -2580,7 +2580,7 @@ async function fetchLiveData(){
   }
   liveDataLoaded=true;renderAll();
   toast('Live data loaded \u2014 '+MKTS.CA.campaigns.length+' CA, '+MKTS.MX.campaigns.length+' MX campaigns','ok');
-  fetchPerformanceData(creds);
+  fetchPerformanceData(apiCreds);
 }
 
 async function fetchPerformanceData(creds){
