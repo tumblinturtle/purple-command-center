@@ -2545,10 +2545,10 @@ const AMZ_PROFILES={CA:'217031416894921',MX:'4197744967944144'};
 let liveDataLoaded=false;
 
 async function fetchLiveData(){
-  const store=peStore_load();
-  const cid=store.credentials?.clientId;
-  const cs=store.credentials?.clientSecret;
-  const rt=store.credentials?.refreshToken;
+  const creds=window._peLoadedCredentials||{};
+  const cid=creds.clientId;
+  const cs=creds.clientSecret;
+  const rt=creds.refreshToken;
   if(!cid||!cs||!rt){console.log('No API credentials');return;}
   toast('Fetching live campaign data...','in');
   const creds={refreshToken:rt,clientId:cid,clientSecret:cs};
